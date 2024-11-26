@@ -1,7 +1,7 @@
 
 <div align = "center">
 
-# 🙌 저는 $\color{#0404B4}서찬영$이에요!
+# 🙌 저는 $\color{#FFFF00}서찬영$이에요!
 ![이미지](https://valorantinfo.com/images/kr/tactibear-spray_valorant_gif_3946.gif)
 
 🔻 $\color{#5ad7b7}제\ 블로그는\ 여기에요$ 🔻  
