@@ -1,15 +1,11 @@
-<div align="center">
 
+<div align = "center">
 
-# 🙌 저는 서찬영이에요!
+# 🙌 저는 $\color{#0404B4}서찬영$이에요!
 ![이미지](https://valorantinfo.com/images/kr/tactibear-spray_valorant_gif_3946.gif)
 
-🔻 제 **블로그**는 여기에요 🔻  
+🔻 $\color{#5ad7b7}제\ 블로그는\ 여기에요$ 🔻  
 [치자피즈의 티스토리](https://cheezzapisse.tistory.com/)
-
-
-
-
 
 
 # 📢 프로젝트 주제
