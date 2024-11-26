@@ -2,7 +2,7 @@
 
 
 # 🙌 저는 서찬영이에요!
-![이미지](https://valorantinfo.com/images/kr/tactibear-spray_valorant_icon_3946.webp)
+![이미지](https://valorantinfo.com/images/kr/tactibear-spray_valorant_gif_3946.gif)
 
 🔻 제 **블로그**는 여기에요 🔻  
 [치자피즈의 티스토리](https://cheezzapisse.tistory.com/)
