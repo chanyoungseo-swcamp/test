@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/login_box.css" />
+    <link rel="stylesheet" href="../css/mini_card.css" />
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+
+    body,
+    div,
+    p,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    ul,
+    ol,
+    li,
+    dl,
+    dt,
+    dd,
+    table,
+    th,
+    td,
+    form,
+    fieldset,
+    legend,
+    input,
+    textarea,
+    button,
+    select,
+    label,
+    header,
+    footer,
+    main,
+    article,
+    aside,
+    section,
+    address {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+
+    body,
+    div,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol,
+    li,
+    button,
+    select,
+    header,
+    footer,
+    main {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body,
+    input,
+    select,
+    button {
+        font-family: Spoqa Han Sans Neo, Noto Sans KR, Malgun Gothic, 맑은 고딕, 돋움,
+            dotum, Apple SD Gothic Neo, Helvetica Neue, Helvetica, Roboto, Arial,
+            sans-serif;
+        font-weight: 400;
+        color: #111518;
+        line-height: 1.5;
+        letter-spacing: normal;
+    }
+
+    a {
+        background-color: transparent;
+        text-decoration: none;
+        display: block;
+        color: #111518;
+    }
+
+    h1 {
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+    button {
+        overflow: visible;
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 400;
+    }
+
+    /* header */
+
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        box-sizing: inherit;
+    }
+
+    .header_inner {
+        width: 100%;
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .header .header_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 1.6rem;
+        padding: 0.4rem 0;
+    }
+
+    .btn_logo {
+        display: flex;
+        padding: 0.5rem 1.2rem;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #fff;
+        line-height: 150%;
+        border-radius: 9.9rem;
+        background-color: #356cff;
+        border: 0;
+    }
+
+    .header .header_wrapper>ul {
+        display: flex;
+        margin-left: 2.4rem;
+        list-style: none;
+    }
+
+    .header .header_wrapper>ul li:not(:first-child) {
+        margin-left: 2.4rem;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    .header .header_wrapper>ul li a {
+        display: flex;
+        font-size: 1.4rem;
+        color: #111518;
+    }
+
+    /* header 아래 부분 */
+
+    .header .header_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.4rem;
+        padding: 0;
+    }
+
+    /* 로고 */
+    .logo_title a {
+        padding: 2.3rem 0;
+    }
+
+    .logo_title .logo,
+    .allmenu .logo {
+        width: 18rem;
+        height: 3.6rem;
+    }
+
+    /* 로고 옆 메뉴 */
+    .gnb_menu {
+        cursor: pointer;
+    }
+
+    .gnb_menu .menu_list {
+        padding: 0 5rem;
+        display: flex;
+    }
+
+    .header_menu .menu_list li a {
+        padding: 2.5rem 2.8rem;
+        display: flex;
+        align-items: center;
+        height: 8rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    /* 메뉴 하단 */
+    .gnb_menu .gnb_menu_wrap {
+        position: absolute;
+        visibility: hidden;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        transition: all 0.2s ease-in;
+        background-color: #fff;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+    .gnb_menu .gnb_menu_wrap .gnb_menu_inner {
+        padding: 4rem 0;
+        margin: 0 auto;
+        display: flex;
+        width: 120rem;
+    }
+
+    .gnb_menu .gnb_menu_wrap .gnb_menu_inner .gnb_menu_list {
+        padding-right: 2.4rem;
+        width: 20.8rem;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .gnb_menu .gnb_menu_wrap .gnb_menu_inner .gnb_menu_list:not(:last-child) {
+        margin-right: 4rem;
+    }
+
+    .gnb-menu .gnb-menu-wrap .gnb-menu-inner .gnb-menu-list .dep1-list .item {
+        padding: 0.8rem 0;
+        font-family: Spoqa Han Sans Neo, sans-serif;
+        width: 20.8rem;
+        font-size: 1.8rem;
+        line-height: 150%;
+    }
+
+    .gnb_menu .gnb_menu_wrap .gnb_menu_inner .gnb_menu_list .dep1-list .item {
+        padding: 0.8rem 0;
+        font-family: Spoqa Han Sans Neo, sans-serif;
+        width: 20.8rem;
+        font-size: 1.8rem;
+        line-height: 150%;
+    }
+
+    .gnb-menu .gnb-menu-wrap .gnb-menu-inner .gnb-menu-list {
+        padding-right: 2.4rem;
+        width: 20.8rem;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    /* 마이페이지 */
+    .header .util-area {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .util-area .v-btn {
+        min-width: auto;
+        padding: 0;
+    }
+
+    .header .util-area .v-btn+.v-btn {
+        margin-left: 2.4rem;
+    }
+
+    .v-btn {
+        border: 0;
+        background: transparent;
+    }
+
+    .v-btn.v-btn--density-default {
+        height: calc(var(--v-btn-height) + 0px);
+    }
+
+    .v-theme--DefaultTheme {
+        color-scheme: normal;
+        --v-theme-background: 255, 255, 255;
+        --v-theme-background-overlay-multiplier: 1;
+        --v-theme-surface: 255, 255, 255;
+        --v-theme-surface-overlay-multiplier: 1;
+        --v-theme-surface-bright: 255, 255, 255;
+        --v-theme-surface-bright-overlay-multiplier: 1;
+        --v-theme-surface-light: 238, 238, 238;
+        --v-theme-surface-light-overlay-multiplier: 1;
+        --v-theme-surface-variant: 66, 66, 66;
+        --v-theme-surface-variant-overlay-multiplier: 2;
+        --v-theme-on-surface-variant: 255, 255, 255;
+        --v-theme-primary: 53, 108, 255;
+        --v-theme-primary-overlay-multiplier: 1;
+        --v-theme-primary-darken-1: 31, 85, 146;
+        --v-theme-primary-darken-1-overlay-multiplier: 2;
+        --v-theme-secondary: 233, 237, 251;
+        --v-theme-secondary-overlay-multiplier: 1;
+        --v-theme-secondary-darken-1: 1, 135, 134;
+        --v-theme-secondary-darken-1-overlay-multiplier: 1;
+        --v-theme-error: 255, 54, 54;
+        --v-theme-error-overlay-multiplier: 1;
+        --v-theme-info: 62, 201, 214;
+        --v-theme-info-overlay-multiplier: 1;
+        --v-theme-success: 44, 168, 127;
+        --v-theme-success-overlay-multiplier: 1;
+        --v-theme-warning: 229, 138, 0;
+        --v-theme-warning-overlay-multiplier: 1;
+        --v-theme-lightprimary: 233, 240, 255;
+        --v-theme-lightprimary-overlay-multiplier: 1;
+        --v-theme-lightsecondary: 248, 249, 250;
+        --v-theme-lightsecondary-overlay-multiplier: 1;
+        --v-theme-lightsuccess: 192, 229, 217;
+        --v-theme-lightsuccess-overlay-multiplier: 1;
+        --v-theme-lightinfo: 197, 239, 243;
+        --v-theme-lightinfo-overlay-multiplier: 1;
+        --v-theme-lighterror: 245, 190, 190;
+        --v-theme-lighterror-overlay-multiplier: 1;
+        --v-theme-lightwarning: 247, 220, 179;
+        --v-theme-lightwarning-overlay-multiplier: 1;
+        --v-theme-darkText: 29, 38, 48;
+        --v-theme-darkText-overlay-multiplier: 2;
+        --v-theme-lightText: 17, 21, 24;
+        --v-theme-lightText-overlay-multiplier: 2;
+        --v-theme-darkprimary: 63, 120, 255;
+        --v-theme-darkprimary-overlay-multiplier: 1;
+        --v-theme-darksecondary: 62, 72, 83;
+        --v-theme-darksecondary-overlay-multiplier: 2;
+        --v-theme-darkinfo: 48, 188, 204;
+        --v-theme-darkinfo-overlay-multiplier: 1;
+        --v-theme-darksuccess: 33, 151, 108;
+        --v-theme-darksuccess-overlay-multiplier: 1;
+        --v-theme-darkwarning: 222, 119, 0;
+        --v-theme-darkwarning-overlay-multiplier: 1;
+        --v-theme-darkerror: 211, 28, 28;
+        --v-theme-darkerror-overlay-multiplier: 2;
+        --v-theme-borderLight: 232, 235, 238;
+        --v-theme-borderLight-overlay-multiplier: 1;
+        --v-theme-inputBorder: 221, 221, 221;
+        --v-theme-inputBorder-overlay-multiplier: 1;
+        --v-theme-containerBg: 255, 255, 255;
+        --v-theme-containerBg-overlay-multiplier: 1;
+        --v-theme-facebook: 66, 103, 178;
+        --v-theme-facebook-overlay-multiplier: 2;
+        --v-theme-twitter: 29, 161, 242;
+        --v-theme-twitter-overlay-multiplier: 1;
+        --v-theme-linkedin: 14, 118, 168;
+        --v-theme-linkedin-overlay-multiplier: 2;
+        --v-theme-gray100: 243, 245, 247;
+        --v-theme-gray100-overlay-multiplier: 1;
+        --v-theme-primary200: 184, 206, 255;
+        --v-theme-primary200-overlay-multiplier: 1;
+        --v-theme-secondary200: 216, 218, 221;
+        --v-theme-secondary200-overlay-multiplier: 1;
+        --v-theme-warning200: 250, 175, 0;
+        --v-theme-warning200-overlay-multiplier: 1;
+        --v-theme-on-background: 0, 0, 0;
+        --v-theme-on-surface: 0, 0, 0;
+        --v-theme-on-surface-bright: 0, 0, 0;
+        --v-theme-on-surface-light: 0, 0, 0;
+        --v-theme-on-primary: 255, 255, 255;
+        --v-theme-on-primary-darken-1: 255, 255, 255;
+        --v-theme-on-secondary: 0, 0, 0;
+        --v-theme-on-secondary-darken-1: 255, 255, 255;
+        --v-theme-on-error: 255, 255, 255;
+        --v-theme-on-info: 0, 0, 0;
+        --v-theme-on-success: 255, 255, 255;
+        --v-theme-on-warning: 255, 255, 255;
+        --v-theme-on-lightprimary: 0, 0, 0;
+        --v-theme-on-lightsecondary: 0, 0, 0;
+        --v-theme-on-lightsuccess: 0, 0, 0;
+        --v-theme-on-lightinfo: 0, 0, 0;
+        --v-theme-on-lighterror: 0, 0, 0;
+        --v-theme-on-lightwarning: 0, 0, 0;
+        --v-theme-on-darkText: 255, 255, 255;
+        --v-theme-on-lightText: 255, 255, 255;
+        --v-theme-on-darkprimary: 255, 255, 255;
+        --v-theme-on-darksecondary: 255, 255, 255;
+        --v-theme-on-darkinfo: 0, 0, 0;
+        --v-theme-on-darksuccess: 255, 255, 255;
+        --v-theme-on-darkwarning: 255, 255, 255;
+        --v-theme-on-darkerror: 255, 255, 255;
+        --v-theme-on-borderLight: 0, 0, 0;
+        --v-theme-on-inputBorder: 0, 0, 0;
+        --v-theme-on-containerBg: 0, 0, 0;
+        --v-theme-on-facebook: 255, 255, 255;
+        --v-theme-on-twitter: 255, 255, 255;
+        --v-theme-on-linkedin: 255, 255, 255;
+        --v-theme-on-gray100: 0, 0, 0;
+        --v-theme-on-primary200: 0, 0, 0;
+        --v-theme-on-secondary200: 0, 0, 0;
+        --v-theme-on-warning200: 0, 0, 0;
+        --v-border-color: 232, 235, 238;
+        --v-border-opacity: 0.12;
+        --v-high-emphasis-opacity: 0.87;
+        --v-medium-emphasis-opacity: 0.6;
+        --v-disabled-opacity: 0.38;
+        --v-idle-opacity: 0.04;
+        --v-hover-opacity: 0.04;
+        --v-focus-opacity: 0.12;
+        --v-selected-opacity: 0.08;
+        --v-activated-opacity: 0.12;
+        --v-pressed-opacity: 0.12;
+        --v-dragged-opacity: 0.08;
+        --v-theme-kbd: 33, 37, 41;
+        --v-theme-on-kbd: 255, 255, 255;
+        --v-theme-code: 245, 245, 245;
+        --v-theme-on-code: 0, 0, 0;
+        --v-carousel-control-size: 10;
+        --v-gradient: linear-gradient(to right, #3f78ff, #356cff);
+        --v-card-shadow: 0px 8px 24px rgba(19, 25, 32, 0.08);
+    }
+
+    .v-btn--size-x-small {
+        --v-btn-size: 1.3rem;
+        --v-btn-height: 3.2rem;
+        font-size: var(--v-btn-size);
+        padding: 0 1.6rem;
+        font-weight: 500;
+    }
+
+    .v-btn {
+        text-transform: capitalize;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+
+    .v-btn__content {
+        grid-area: content;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .v-btn__content,
+    .v-btn__prepend,
+    .v-btn__append {
+        align-items: center;
+        display: flex;
+        transition: transform, opacity .2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .header .util-area .icon-my {
+        width: 4.8rem;
+        height: 3.2rem;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAYAAADlNHIOAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAhiSURBVHgB7ZxPbBRVGMC/t9uNhShd1JqSWJyeC5EepSRsT7blAFykkKjtASQxEYwChihsT8YYQ2tignKgTQwFEkOJscUTS0Lr0RrKmQmYuGVL2RJiS5bu8/umu8t7b2Z2Z2Zn7e50f0nTnbczb6ffv/fN974tQJ06derUqVOnznqEQQWJIhBp3IcvdzNgO4BnNWAsarzJeRpYSGfAZ7IAtyCzPJ5GYJ1REQVEoy1aKMKPcQ79BYE7u5mRbAYG0+mkDusEXxVAFh+KbDjLgR+HMkBvGcpmlgbXg0f4pgCyehaBm/hSA3/QeQa6gu4NIfCBaHPzDlvhY6zHUDSIP10o0LbHqSSjH55Z3myMAR/Gs3SLaQ2F0twQYMr2gCKWr6OAB9LzyYSjeZpb+vFmzlrOE2BPKEsBFPNZpPFPUISGmc1wNvMs7jaGG1lTeEOchfgx5S1UwnJHENeEMJTBxlc2f42/usUxhuFmYX7ui2UEXELXLC89vdG48WXGGMSEt6KhcKRx6d+nv0PA8OwBudBzT56MDy+k5srKgArzv7ZlSPUEWkOCFoo8L8KhiBGvRXQKO+AXK0txUBZnfLbwRbnVhCcPyMX+x+IYB1xwU8kR8JHo6y0xDEU3X4ywNM8stQVpLfDmAavlBRHdb+ETRgZFJYsCHBdp02fXNJ4UgBftFo8x9l+HCsGBDSsfvhsChCcFcM6lh6MsZ+NQORLiASo7UA9mXhdhTTp6vjwDlaJBfUoOaRAgvClAqXBWclFMJ9W0kzuurtYCvtSC6njHmwKkzITS0i1vQYUwyhMSLFDlCK8eoEtHDbwNKkVDo7LoZnUIEN6yIMb+UiaJQaXgTMr7MS2t3IK/Bnj1gIR4gAo5BhUC60F7laFbECC8KQA30NUnVCobgM/QHgGoKS99doDwpABKOzkPjYpjWLO5aF4wvWPUm0Au+GG9aSRoewLe09AIH1JGNNqQB5/IzaVJg2EYhIBR3o6YRc0ePSG+8DBZlqCib7ScxY2duDQv7jU8ephsAnd8ijs7ksdgGYXu169yRmF+nLcfwH2dqkJbkt7aSoq0tRhbko8RcMcgCiguDqCgaA6/QiUpYCg3L21OaeAOvawnYWMtCEMXKM8FJEBSTG4RdYRR+8drLIUfpk15T7H/Q/EgZ6V+ljL2CvNq4J5RX/qCjLYUCF+zuQlqPxzHiul1KtrlBUlbmlho00JYXuZZFLp1B53OYWV/OpUycn/8Qzm4pwutNJG7nu7R7/0EMkBar2LgDp2u9a8xqwX3iFd8bswiyxeKcaoCPv7EvEN59Mhh2L6tXRwaRgUcx0s1fC3tYZ/+8gwsPnkiXb+npxt6e1b7DM7/eAHu3L1ban5Ki/eVuq8fvldzFhjB+xpoAJ8gQWEI77BpK3FFoa0lVTzsjF2+Yhq7/+AB/HrtF3GIwhBJJKaed/6nC6brt7a+WVDAtu3tcPqrM6Xml4R/e3radF8H+w6ABUai4n81lFGtppxyAXVLsxmv+f7s7CwsLkpWHUXrj4GyHpB1l2LXzp3QiT8iU1PThhLsGBszG8WpE5+pQ2T9Or3wpzUReZVSx4aX7uHE56CsXSuG6wlc3Nzcco/mBJeQ8MeumISA9yR7wMTkDXDCqZMm4Vl6HkGKGbtyVRoj69/a2qqeWkjTy1ZAIXuhvN1FK7oDNJqTFOEmmyJ+MwtXMggKE8WsWMTKCyh0KV5mQN6hUsz6Cc8KMKy+ecu5XNuIZnUOCjBBzbc8m91PTVXUkCs158JKh/EencO5XdjSyCPos8AhXsJEMVQvIOFbedA3334nHe/qfKeo9ROeFLDaFbfhpuX3APLd0NTFNp/sSqfmjqcfPRynjjYxrtNrSi+N9+ic+bkOzHraMM2hGpNumrbEdw62yZmJbZggpqb/KLy2EJAJ8gL1vEtKmLPyqpMnPlenkqyfcK2AF93Q5jhvCP75MxJ83EsLIWVS6VSyn9JPmsvNtZRPi6Fi7PJVy/NUQZGVOuGkEkrIy8QUVfUqmneXEroAzH+TKwUUbUXHcLIq+PKrlYYicC7yCLD+7oAJCguiMEnIJGwVUVBk1a0OPIA4hItp06ZN0tjExGThs9TFt+9AnzpFQrV+wrECVus+ZuGj5Y0areO5p1U/IUXQ3NxB3xEJQc23JybkOK3G7s7OnZaLqR1HPzosHeefI9TFlxR7qO899XJLj3asAKvyMAl/AUNGRdtSiPl/9rPVtaEoTZua5DCEcVoU8MTkpPTkSwJdfLIITjl65IjkBTQ3eZm6+FrE/kS+HKLiSAGUBqqLIFklCR/+J5x8FglTDEMkoDt3ZwvHl4R1gax0e3s73L//NzilqWmTyQve/2BAWlNsrN/WeBwpQN2ZAorLz5cGoMogQZCViuQXY1LGlLAmHDQLyQ7Ju01eoNSSLKxfR+sfARtKKiC6+jSqiWNllIcrDlmpGIYo7Ii/89jUZ6wg602L86tekMdN7M9TUgGMvmwtHw+a2wWriz097xZe5+P0bWGhtHlAsoOEL3Voq16Qx631E0UVYNGVoGcbYASqnIN9fZKAKBsSsx+LFLEUVEuWvKC3t9t0klvrJ0p5gLyjhKt5tVs/QQISQ4xRuxFitdOHrzy5fV/X34EoZf2ErQKMhy51l6eGuhKsLJSwqU6uGfYeEM4qpQY+UwvWn4fKAFZxure7G6qJIiEoHBOPWA22BKrZCln+nt5aUUCIvy0eZhlPQI3R29sjHVPpodqw3RNmasGNcx1qDHrSpf1d2qYk7PL3taTYprwmHWUyOtQgP49ehGrGcTFuPf47sToKfG2I5z57hLvEyd/kW19QlaJbjGlQRQRdAQNqHR4NkzaVYlAl1L+mWqdOnTXkP2NSglWHL+MCAAAAAElFTkSuQmCC);
+    }
+
+    .v-btn .v-icon {
+        --v-icon-size-multiplier: .8571428571;
+    }
+
+    [class*=icon-] {
+        --v-icon-size: 2.4rem;
+        --v-icon-size-medium: 2.8rem;
+        --v-icon-size-large: 3.2rem;
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 0;
+        background-size: cover;
+    }
+
+    .v-icon--size-default {
+        font-size: calc(var(--v-icon-size-multiplier)* 1.5em);
+    }
+
+    .header .util-area .icon-allmenu {
+        width: 3.2rem;
+        height: 3.2rem;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACWSURBVHgB7dixDcIwEEDRMxOQIlJKNmMGNoANWIHJSAdSCjwBRypEEQ+Q8F7j4nTNufsRAADAPyqtwb4fjiXzGqXsY93GjDjX6XlbGjYP0PXDfX4OsQmlvqZHtzTZNXcy1/7zP7K2Js0DZCmn+Rlj7TJrvuMSAAAA8KUItbYUIUVIEQIAAGCrFKHWliKkCClCAADAdn0AHwtNRGOAzC4AAAAASUVORK5CYII=);
+    }
+
+    /* all menu */
+    .v-overlay-container {
+        contain: layout;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        display: contents;
+    }
+
+    .v-dialog--fullscreen>.v-overlay__content {
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .v-dialog>.v-overlay__content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+
+
+
+    .v-dialog>.v-overlay__content,
+    .v-dialog>.v-overlay__content>form {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .v-overlay__content {
+        outline: none;
+        position: absolute;
+        pointer-events: auto;
+        contain: layout;
+    }
+
+    .menu-full-popup .v-overlay__scrim {
+        background: none;
+        opacity: 0;
+    }
+
+    .v-overlay__scrim {
+        pointer-events: auto;
+        background: rgb(var(--v-theme-on-surface));
+        border-radius: inherit;
+        bottom: 0;
+        left: 0;
+        opacity: var(--v-overlay-opacity, .32);
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    .allmenu {
+        padding: 4.8rem 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        overflow-x: hidden;
+
+    }
+
+
+    .allmenu .allmenu_inner {
+        position: relative;
+        margin: 0 auto;
+        width: 120rem;
+    }
+
+    .allmenu .allmenu_inner .allmenu_head {
+        display: flex;
+        align-items: center;
+        height: 8rem;
+    }
+
+    .allmenu .customer-box,
+    .allmenu .outlogin-box,
+    .allmenu .allmenu-login-wrap {
+        display: none;
+    }
+
+    .allmenu .allmenu_inner .allmenu_list_wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .allmenu .allmenu_inner .allmenu_list_wrap .allmenu_list {
+        position: relative;
+        margin-top: 6.4rem;
+        margin-bottom: 6.4rem;
+        margin-right: 2.4rem;
+        width: 18.4rem;
+
+    }
+
+    .allmenu .allmenu_inner .allmenu_list_wrap .allmenu_list .title {
+        padding: 1.6rem 0;
+        color: #111518;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .allmenu .allmenu_inner .allmenu_list_wrap .allmenu_list:not(:nth-child(5n+1)) {
+        padding-left: 4rem;
+        width: 22.4rem;
+        border-left: 1px solid #e5e5e5;
+    }
+
+    .allmenu .allmenu_inner .allmenu_list_wrap .allmenu_list .dep1_list .item {
+        padding: .8rem 0;
+        font-size: 1.8rem;
+        line-height: 150%;
+    }
+
+
+    .v-btn.btn-popup-close {
+        all: unset;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        top: 2.4rem;
+        right: 2.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHkSURBVHgB7ZgxTsMwFIafyxLSVGorFWVlY+QIvQFHoCMjI0yEG8AN6A04AmyMMDKxpqIqQkrTLtT4VWlVpWltx+918idFiqza7//kyH4qgMfj8Xg8Gtq9eIAPHAjSerhQpxdLfLon8R0w01Y1VvVMJBpggZSQcEpgeKFq2Mw50v1gnmfvQRgJIaBfDPXDKILZNHsFQsrh1fv9zzh90M3TCiBK4oVToir8ZJwmJnONBBCUCJvRqXo9L4ZIJLbCg3ycjEc3pvONBZBZnj1TSmyHh+Hke3QFFlgJIFQS1eHTAVhiLYC4SlCFR2oJIHUlKMMjtQUQWwnq8IiTAGIqwREecRZAdBJc4Yu16Oj24icJcLleXECygOXFlGwUJAtfrEdLWaJUjDQ8QvIJbVLxOS3hCI9YdaOmLAR8bQ1WjRFAvgN7WmKWLpZUoOq0Uc8HEDeAm5AJ7DoqqRvAMiQCunOeU8JZwPSS4pJwErC9YTkkagvUbQ+oJWoJuPY2lBLWAlSNGZWElQB1V0khYSzA1RK7ShgJcPbziIuEVoA7/IoqiaDV+p1Ps7d987TdqFjIdVvMFX4Fro011vX+5IVujnYHgmb4CbJxpl6H6r/Ka2AGdyI4bnVU/FQZ3M7zPAWPx+PxeHbwD9x7fj2dncSHAAAAAElFTkSuQmCC);
+        background-size: 2.4rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+
+    /*  */
+
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+
+    /* 로그인 */
+
+
+
+    /* 공통 */
+    @media (min-width: 960px) and (max-width: 1279px) {
+        html {
+            font-size: 0.7813vw !important;
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+        .header {
+            padding: 1.4rem 2.4rem;
+        }
+
+        .header .header_menu .menu_list,
+        .header .header_wrapper {
+            display: none;
+        }
+    }
+
+    element.style {
+        --v-layout-left: 0px;
+        --v-layout-right: 0px;
+        --v-layout-top: 0px;
+        --v-layout-bottom: 0px;
+    }
+
+    .v-main.container {
+        flex: unset;
+        margin: 0;
+        padding: 6.4rem 0 16rem;
+    }
+
+    .v-main {
+        flex: 1 0 auto;
+        max-width: 100%;
+        transition: .2s cubic-bezier(.4, 0, .2, 1);
+        padding-left: var(--v-layout-left);
+        padding-right: var(--v-layout-right);
+        padding-top: var(--v-layout-top);
+        padding-bottom: var(--v-layout-bottom);
+    }
+
+    .v-main.container .ly-inner {
+        width: 100%;
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .sub-title-area,
+    .search-wrap {
+        margin-bottom: 4rem;
+    }
+
+    .sub-title {
+        font-family: OneShinhan, sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        color: #111518;
+    }
+
+    .my-page .my-case-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .my-page .my-case-info .case-member {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-page .my-case-info .case-btn {
+        display: flex;
+        align-items: center;
+        align-self: end;
+    }
+
+    .my-page .my-case-info .case-member .member-title {
+        font-size: 3.2rem;
+        font-weight: 500;
+        color: #111518;
+    }
+
+    .v-locale--is-ltr {
+        direction: ltr;
+    }
+
+    .v-layout--full-height {
+        --v-scrollbar-offset: inherit;
+        height: 100%;
+    }
+
+    .v-layout {
+        --v-scrollbar-offset: 0px;
+        display: flex;
+        flex: 1 1 auto;
+    }
+
+    .v-application {
+        display: flex;
+        background: rgb(var(--v-theme-background));
+        color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+    }
+
+    .my-page .my-case-info .case-member .member-title>span {
+        color: #356cff;
+    }
+
+    v-btn__content {
+        grid-area: content;
+        justify-content: center;
+        white-space: nowrap;
+        align-items: center;
+        display: flex;
+        transition: transform, opacity .2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .my-page .my-case-info .case-btn .v-btn .btn-arrow {
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADlSURBVHgB7di7DcIwFIXhY2hQSBEigjxORmAENiFMwiqwASvQUSCq8OiMrwQdBZIfV5bOJ7lJk/vLhS0DREREVLimsxtZUDBFIBncAHu/1lVd43kfj8hogoicw9Cu7BYZBe/A6zGeZlVtjEH/+dTn3IngAOEjDloRUQKEVkS0AKERETVA5I6IHiByRiQJELkikgWIHBFJA0TqiOQBImVElgDxK2I2r89ykiNA1LvQH39zKFXjL3mLzrrvapd2QCk4vBYOr4XDa+HwWsoe3r8LaQ4f9S5kHHa362VAaTSfFomIiEjTG+b9ozhftIqVAAAAAElFTkSuQmCC);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    @supports selector(:focus-visible) {
+        .v-list-item:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border: 2px solid currentColor;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity .2s ease-in-out;
+        }
+    }
+
+    .my-page .submenu-list .v-list .v-list-item {
+        padding: 1.6rem 2.4rem;
+        min-height: 6.4rem;
+    }
+
+    .v-list-item--density-compact:not(.v-list-item--nav).v-list-item--one-line {
+        padding-inline: 16px;
+    }
+    .v-col-xxl, .v-col-xxl-auto, .v-col-xxl-12, .v-col-xxl-11, .v-col-xxl-10, .v-col-xxl-9, .v-col-xxl-8, .v-col-xxl-7, .v-col-xxl-6, .v-col-xxl-5, .v-col-xxl-4, .v-col-xxl-3, .v-col-xxl-2, .v-col-xxl-1, .v-col-xl, .v-col-xl-auto, .v-col-xl-12, .v-col-xl-11, .v-col-xl-10, .v-col-xl-9, .v-col-xl-8, .v-col-xl-7, .v-col-xl-6, .v-col-xl-5, .v-col-xl-4, .v-col-xl-3, .v-col-xl-2, .v-col-xl-1, .v-col-lg, .v-col-lg-auto, .v-col-lg-12, .v-col-lg-11, .v-col-lg-10, .v-col-lg-9, .v-col-lg-8, .v-col-lg-7, .v-col-lg-6, .v-col-lg-5, .v-col-lg-4, .v-col-lg-3, .v-col-lg-2, .v-col-lg-1, .v-col-md, .v-col-md-auto, .v-col-md-12, .v-col-md-11, .v-col-md-10, .v-col-md-9, .v-col-md-8, .v-col-md-7, .v-col-md-6, .v-col-md-5, .v-col-md-4, .v-col-md-3, .v-col-md-2, .v-col-md-1, .v-col-sm, .v-col-sm-auto, .v-col-sm-12, .v-col-sm-11, .v-col-sm-10, .v-col-sm-9, .v-col-sm-8, .v-col-sm-7, .v-col-sm-6, .v-col-sm-5, .v-col-sm-4, .v-col-sm-3, .v-col-sm-2, .v-col-sm-1, .v-col, .v-col-auto, .v-col-12, .v-col-11, .v-col-10, .v-col-9, .v-col-8, .v-col-7, .v-col-6, .v-col-5, .v-col-4, .v-col-3, .v-col-2, .v-col-1 {
+    width: 100%;
+    padding: 12px;
+    }
+
+    @media (min-width: 960px) {
+        .v-col-md-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+
+    .my-page .submenu-list .v-list.selected {
+        border: .1rem solid #356cff;
+        box-shadow: 0 1.6rem 1.6rem #1326590f;
+    }
+
+    .my-page .submenu-list .v-list .v-list-item {
+        padding: 1.6rem 2.4rem;
+        min-height: 6.4rem;
+    }
+
+    .v-list-item--density-compact:not(.v-list-item--nav).v-list-item--one-line {
+        padding-inline: 16px;
+    }
+
+    .v-list-item--density-compact.v-list-item--one-line {
+        min-height: 40px;
+    }
+
+    .my-page .submenu-list .v-list {
+        overflow: hidden;
+        height: 6.4rem;
+        padding: 0;
+        color: #111518;
+        border: .1rem solid #e5e5e5;
+        border-radius: 1.6rem;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <div class="header_wrapper">
+                <button class="btn_logo" type="button">QueDoc</button>
+                <ul>
+                    <li><a href="/#" class="">로그인</a></li>
+                    <li><a href="/#" class="">회원가입</a></li>
+                    <li><a href="/#" class="">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="header_menu">
+                <h1 class="logo_title">
+                    <a aria-current="page" href="/#" class="router-link-active router-link-exact-active"
+                        title="DataBada"><img alt="" class="logo"
+                            src="data:image/png;base64,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" /></a>
+                </h1>
+                <nav class="gnb_menu">
+                    <ul class="menu_list">
+                        <li><a href="javascript:;">Data서비스</a></li>
+                        <li><a href="javascript:;">솔루션서비스</a></li>
+                        <li><a href="javascript:;">광고서비스</a></li>
+                        <li><a href="javascript:;">API서비스</a></li>
+                        <li><a href="javascript:;">커뮤니티</a></li>
+                    </ul>
+                    <div class="gnb_menu_wrap">
+                        <div class="gnb_menu_inner">
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">Data서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <span class="title-link">솔루션서비스</span>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <a class="title-link" href="javascript:;">광고서비스</a>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">API서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">커뮤니티</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="util-area">
+                    <a class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        href="/#" title="MY"><span class="v-btn__overlay"></span><span
+                            class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator=""><i
+                                class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-my"
+                                aria-hidden="true"><!----></i></span><!----><!----></a><button type="button"
+                        class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        title="전체메뉴">
+                        <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content v_menu_bar" data-no-activator="">
+                            <i class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-allmenu"
+                                aria-hidden="true"><!----></i>
+                            </svg>
+                        </span><!----><!---->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="v-overlay-container" style="display: none;">
+        <div class="v-overlay v-overlay--active v-theme--DefaultTheme v-locale--is-ltr v-dialog v-dialog--fullscreen menu-full-popup v-overlay--scroll-blocked"
+            aria-modal="true" role="dialog" style="z-index: 2400">
+            <div class="v-overlay__scrim"></div>
+            <div class="v-overlay__content">
+                <div class="allmenu">
+                    <div class="allmenu_inner">
+                        <div class="allmenu_head">
+                            <div class="logo_title">
+                                <a aria-current="page" href="/main"
+                                    class="router-link-active router-link-exact-active"><img alt="" class="logo"
+                                        src="data:image/png;base64,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" /></a>
+                            </div>
+                            <div class="allmenu-login-wrap">
+                                <ul class="login-txt-box">
+                                    <li>
+                                        <a href="/gin" class="menu-login"><i
+                                                class="icon-login mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i>
+                                            로그인
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/mem/memtype" class="menu-join"><i
+                                                class="icon-join mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i>
+                                            회원가입
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="allmenu_list_wrap">
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>Data서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>솔루션서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>광고서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>API서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>커뮤니티</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>DataBada</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/shc/info/cont/01" class="">DataBada </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/shc/data/cont/01" class="">신한 DataUniverse </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>MY</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item"><a href="/gin" class="">MY계약 </a></li>
+                                    <li class="item"><a href="/gin" class="">관심상품 </a></li>
+                                    <li class="item"><a href="/gin" class="">MY문의 </a></li>
+                                    <li class="item"><a href="/gin" class="">알림 </a></li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list mo-customer">
+                                <h2 class="title"><span>고객센터</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/csc/anc?store=init" class="">공지사항 </a>
+                                    </li>
+                                    <li class="item"><a href="/csc/faq" class="">FAQ</a></li>
+                                    <li class="item">
+                                        <a href="/csc/qna?store=init" class="">고객문의 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="customer-box">
+                                <li>
+                                    <a href="/csc/anc?store=init" class="notice">공지사항 </a>
+                                </li>
+                                <li><a href="/csc/faq" class="faq">FAQ</a></li>
+                                <li>
+                                    <a href="/csc/qna?store=init" class="customer-center">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button"
+                            class="v_close_btn v-btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close">
+                            <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                                class="v-btn__content" data-no-activator=""><span
+                                    class="sr-only"></span></span><!----><!---->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main data-v-5c759549="" class="v-main container"
+        style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;">
+        <div data-v-5c759549="" class="ly-inner">
+            <div data-v-5c759549="" class="sub-group my-page">
+                <div class="sub-title-area">
+                    <h4 class="sub-title">MY</h4>
+                </div>
+                <div class="my-case-info">
+                    <div class="case-member">
+                        <p class="member-title"><span>고객</span>님 안녕하세요! </p><!----><!---->
+                    </div>
+                    <div class="case-btn"><!----><button type="button"
+                            class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-text"><span
+                                class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                                class="v-btn__content" data-no-activator=""> 정보변경 <i
+                                    class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default btn-arrow"
+                                    aria-hidden="true"><!----></i></span><!----><!----></button><button type="button"
+                            class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-text"><span
+                                class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                                class="v-btn__content" data-no-activator=""> 사업자계정전환 <i
+                                    class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default btn-arrow"
+                                    aria-hidden="true"><!----></i></span><!----><!----></button></div>
+                </div>
+                <div class="submenu-list">
+                    <div class="v-row">
+                        <div class="v-col-md-3 v-col-12">
+                            <div class="v-list v-theme--DefaultTheme v-list--density-compact v-list--one-line selected"
+                                tabindex="0" role="listbox">
+                                <div class="v-list-item v-list-item--link v-theme--DefaultTheme v-list-item--density-compact v-list-item--one-line v-list-item--variant-text"
+                                    tabindex="-2"><span class="v-list-item__overlay"></span><span
+                                        class="v-list-item__underlay"></span><!---->
+                                    <div class="v-list-item__content" data-no-activator=""><!----><!---->
+                                        <div class="v-list-item-title">MY계약</div>
+                                    </div>
+                                    <div class="v-list-item__append">
+                                        <div
+                                            class="v-avatar v-theme--DefaultTheme v-avatar--density-default v-avatar--size-default v-avatar--variant-flat">
+                                            <i class="my-contract mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i><!----><span class="v-avatar__underlay"></span>
+                                        </div>
+                                        <div class="v-list-item__spacer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-col-md-3 v-col-12">
+                            <div class="v-list v-theme--DefaultTheme v-list--density-compact v-list--one-line"
+                                tabindex="0" role="listbox">
+                                <div class="v-list-item v-list-item--link v-theme--DefaultTheme v-list-item--density-compact v-list-item--one-line v-list-item--variant-text"
+                                    tabindex="-2"><span class="v-list-item__overlay"></span><span
+                                        class="v-list-item__underlay"></span><!---->
+                                    <div class="v-list-item__content" data-no-activator=""><!----><!---->
+                                        <div class="v-list-item-title">관심상품</div>
+                                    </div>
+                                    <div class="v-list-item__append">
+                                        <div
+                                            class="v-avatar v-theme--DefaultTheme v-avatar--density-default v-avatar--size-default v-avatar--variant-flat">
+                                            <i class="my-wishlist mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i><!----><span class="v-avatar__underlay"></span>
+                                        </div>
+                                        <div class="v-list-item__spacer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-col-md-3 v-col-12">
+                            <div class="v-list v-theme--DefaultTheme v-list--density-compact v-list--one-line"
+                                tabindex="0" role="listbox">
+                                <div class="v-list-item v-list-item--link v-theme--DefaultTheme v-list-item--density-compact v-list-item--one-line v-list-item--variant-text"
+                                    tabindex="-2"><span class="v-list-item__overlay"></span><span
+                                        class="v-list-item__underlay"></span><!---->
+                                    <div class="v-list-item__content" data-no-activator=""><!----><!---->
+                                        <div class="v-list-item-title">MY문의</div>
+                                    </div>
+                                    <div class="v-list-item__append">
+                                        <div
+                                            class="v-avatar v-theme--DefaultTheme v-avatar--density-default v-avatar--size-default v-avatar--variant-flat">
+                                            <i class="my-qa mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i><!----><span class="v-avatar__underlay"></span>
+                                        </div>
+                                        <div class="v-list-item__spacer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-col-md-3 v-col-12">
+                            <div class="v-list v-theme--DefaultTheme v-list--density-compact v-list--one-line"
+                                tabindex="0" role="listbox">
+                                <div class="v-list-item v-list-item--link v-theme--DefaultTheme v-list-item--density-compact v-list-item--one-line v-list-item--variant-text"
+                                    tabindex="-2"><span class="v-list-item__overlay"></span><span
+                                        class="v-list-item__underlay"></span><!---->
+                                    <div class="v-list-item__content" data-no-activator=""><!----><!---->
+                                        <div class="v-list-item-title">알림</div>
+                                    </div>
+                                    <div class="v-list-item__append">
+                                        <div
+                                            class="v-avatar v-theme--DefaultTheme v-avatar--density-default v-avatar--size-default v-avatar--variant-flat">
+                                            <i class="my-alarm mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i><!----><span class="v-avatar__underlay"></span>
+                                        </div>
+                                        <div class="v-list-item__spacer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!----><!---->
+                <div class="total-area">
+                    <div class="total"> 총&nbsp; <span>0건</span></div>
+                </div>
+                <hr class="v-divider v-theme--DefaultTheme svc-divide" aria-orientation="horizontal" role="separator">
+                <div class="search-result">
+                    <div class="text">나의 내역</div>
+                    <div class="desc">내역이 없습니다.</div>
+                </div><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+            </div>
+        </div>
+    </main>
+    <div class="main_card_wrap">
+        <div class="main_card_inner">
+            <a class="v_btn v_theme_DefaultTheme  btn_size_default card_box" href="/serv/data/prod/srch">
+                <span class="v_btn_overlay"></span>
+                <span class="v_btn_underlay"></span>
+                <span class="v_btn_content" data-no-activator="">
+                    <div class="title_area">
+                        <span class="card_stit">다양한</span>
+                        <strong class="card_title">Data서비스</strong>
+                    </div>
+                    <i class="v-icon notranslate v_theme_DefaultTheme card_icon ico_main_data" aria-hidden="true"></i>
+                    <span class="card-text">Data One-Stop Service</span>
+                    <i class="icon_card_arrow mdi v-icon notranslate v_theme_DefaultTheme v-icon--size-default"
+                        aria-hidden="true"></i>
+                </span>
+            </a>
+            <a class="v_btn v_theme_DefaultTheme  btn_size_default card_box" href="/serv/data/prod/srch">
+                <span class="v_btn_overlay"></span>
+                <span class="v_btn_underlay"></span>
+                <span class="v_btn_content" data-no-activator="">
+                    <div class="title_area">
+                        <span class="card_stit">QueDoc</span>
+                        <strong class="card_title">병원 예약 서비스</strong>
+                    </div>
+                    <i class="v-icon notranslate v_theme_DefaultTheme card_icon ico_main_data" aria-hidden="true"></i>
+                    <span class="card-text">Data One-Stop Service</span>
+                    <i class="icon_card_arrow mdi v-icon notranslate v_theme_DefaultTheme v-icon--size-default"
+                        aria-hidden="true"></i>
+                </span>
+            </a>
+        </div>
+
+    </div>
+    </div>
+
+
+    <script>
+        let isMenuOpen = false;  // 메뉴 상태를 추적하는 변수
+
+        // 메뉴 열기 버튼 클릭
+        const menu_btn = document.querySelector(".v_menu_bar");
+        menu_btn.addEventListener("click", function (event) {
+            console.log("click");
+
+            if (!isMenuOpen) {  // 메뉴가 열리지 않은 상태에서만 열도록
+                // 메뉴를 열 때 display 값을 'block'으로 설정
+                document.querySelector('.v-overlay__content').style.display = 'block';
+                document.querySelector('.v-overlay-container').style.cssText = 'display: visible;';
+                document.querySelector('.header').style.cssText = 'z-index: -1;';
+
+                isMenuOpen = true;  // 메뉴 상태를 '열림'으로 변경
+            }
+        });
+
+        // 메뉴 닫기 버튼 클릭
+        const menu_close_btn = document.querySelector(".v_close_btn");
+        menu_close_btn.addEventListener("click", function (event) {
+            console.log('hey');
+
+            // 메뉴가 열려 있을 때만 닫기
+            if (isMenuOpen) {
+                document.querySelector('.v-overlay__content').style.display = 'none';
+                document.querySelector('.v-overlay-container').style.cssText = 'display: none;';
+                document.querySelector('.header').style.cssText = 'z-index: 1;'; // 필요에 따라 z-index 값 복구
+
+                isMenuOpen = false;  // 메뉴 상태를 '닫힘'으로 변경
+            }
+        });
+    </script>
+
+</body>
+
+</html>
