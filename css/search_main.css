@@ -1,0 +1,13 @@
+.v-main.main {
+    flex: unset;
+    margin: 0;
+    padding: 3.2rem 0 16rem;
+}
+
+
+
+@media only screen and (max-width: 960px) {
+    .v-main.main, .v-main.container {
+        padding: 2.4rem 0 8rem;
+    }
+}
