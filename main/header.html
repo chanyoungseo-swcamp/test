@@ -103,7 +103,7 @@
                 <div class="util-area">
                     <a class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
                         href="/#" title="MY"><span class="v-btn__overlay"></span><span
-                            class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator=""><i
+                            class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator="" onclick="window.location='/main/mypage.html'"><i
                                 class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-my"
                                 aria-hidden="true"><!----></i></span><!----><!----></a><button type="button"
                         class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
@@ -119,9 +119,6 @@
             </div>
         </div>
     </header>
-
-
-
     <div class="v-overlay-container" style="display: none;">
         <div class="v-overlay v-overlay--active v-theme--DefaultTheme v-locale--is-ltr v-dialog v-dialog--fullscreen menu-full-popup v-overlay--scroll-blocked"
             aria-modal="true" role="dialog" style="z-index: 2400">
@@ -138,7 +135,7 @@
                             <div class="allmenu-login-wrap">
                                 <ul class="login-txt-box">
                                     <li>
-                                        <a href="/gin" class="menu-login"><i
+                                        <a href="/main/login.html" class="menu-login"><i
                                                 class="icon-login mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
                                                 aria-hidden="true"></i>
                                             로그인
@@ -258,7 +255,8 @@
                         <button type="button"
                             class="v_close_btn v-btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close">
                             <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
-                                class="v-btn__content" data-no-activator=""><span
+                                class="v-btn__content" data-no-activator=""
+                                onclick="window.location='./main/mypage.html'"><span
                                     class="sr-only"></span></span><!----><!---->
                         </button>
                     </div>
@@ -266,7 +264,11 @@
             </div>
         </div>
     </div>
-    
+    <button type="button"
+        class="v_btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close"><span
+            class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span class="v-btn__content"
+            data-no-activator=""><span class="sr-only"></span></span><!----><!----></button>
+
 
     <script>
         let isMenuOpen = false;  // 메뉴 상태를 추적하는 변수
