@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new.css">
+</head>
+<body>
+    <main class="authentication-form">
+        <form>
+          <div class="agreement">
+            <label for="agreement">
+              약관동의
+              <select id="agreement">
+                <option value="전체 동의">휴대폰 본인확인 전체 동의</option>
+              </select>
+            </label>
+          </div>
+          <hr />
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="이름 입력" />
+          </div>
+          <div class="form-group id-input">
+            <label for="id-front">주민등록번호</label>
+            <input type="text" id="id-front" placeholder="앞 6자리" />
+            <span>-</span>
+            <input type="password" id="id-back" placeholder="뒤 1자리" />
+          </div>
+          <div class="form-group carrier-select">
+            <label>통신사 선택</label>
+            <div class="buttons">
+              <button type="button">SKT</button>
+              <button type="button">KT</button>
+              <button type="button">LG U+</button>
+              <button type="button">알뜰폰</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone-number">휴대폰번호</label>
+            <input type="text" id="phone-number" placeholder="[-] 없이 숫자만 입력" />
+            <button type="button">인증번호전송</button>
+          </div>
+          <div class="form-group">
+            <label for="verification-code">인증번호</label>
+            <input type="text" id="verification-code" placeholder="숫자 6자리 입력" />
+            <button type="button">휴대번호인증</button>
+          </div>
+          <button class="next-button" type="submit">다음</button>
+        </form>
+      </main>
+      
+</body>
+</html>
