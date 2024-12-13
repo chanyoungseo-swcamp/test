@@ -148,3 +148,26 @@ address {
     line-height: 1.5;
 }
 
+@media only screen and (max-width: 960px) {
+    .v-footer.footer {
+        padding: 3.2rem 2.4rem;
+    }
+
+    .v-footer.footer>.foot-inner {
+        flex-direction: column;
+    }
+
+    .v-footer.footer>.foot-inner>.bottom-logo {
+        width: 10rem;
+        height: 2.2rem;
+    }
+
+    .v-footer.footer>.foot-inner .addr-wrap {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 1.6rem;
+        font-size: 1.2rem;
+        text-align: left;
+        line-height: 150%;
+    }
+}

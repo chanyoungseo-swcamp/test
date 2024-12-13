@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/login_box.css">
+    <link rel="stylesheet" href="../css/mini_card.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <div class="header_wrapper">
+                <button class="btn_logo" type="button">QueDoc</button>
+                <ul>
+                    <li><a href="/#" class="">로그인</a></li>
+                    <li><a href="/#" class="">회원가입</a></li>
+                    <li><a href="/#" class="">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="header_menu">
+                <h1 class="logo_title">
+                    <a aria-current="page" href="/#" class="router-link-active router-link-exact-active"
+                        title="DataBada"><img alt="" class="logo"
+                            src="data:image/png;base64,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" /></a>
+                </h1>
+                <nav class="gnb_menu">
+                    <ul class="menu_list">
+                        <li><a href="javascript:;">Data서비스</a></li>
+                        <li><a href="javascript:;">솔루션서비스</a></li>
+                        <li><a href="javascript:;">광고서비스</a></li>
+                        <li><a href="javascript:;">API서비스</a></li>
+                        <li><a href="javascript:;">커뮤니티</a></li>
+                    </ul>
+                    <div class="gnb_menu_wrap">
+                        <div class="gnb_menu_inner">
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">Data서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <span class="title-link">솔루션서비스</span>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <a class="title-link" href="javascript:;">광고서비스</a>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">API서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">커뮤니티</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="util-area">
+                    <a class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        href="/#" title="MY"><span class="v-btn__overlay"></span><span
+                            class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator="" onclick="window.location='/main/mypage.html'"><i
+                                class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-my"
+                                aria-hidden="true"><!----></i></span><!----><!----></a><button type="button"
+                        class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        title="전체메뉴">
+                        <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content v_menu_bar" data-no-activator="">
+                            <i class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-allmenu"
+                                aria-hidden="true"><!----></i>
+                            </svg>
+                        </span><!----><!---->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="v-overlay-container" style="display: none;">
+        <div class="v-overlay v-overlay--active v-theme--DefaultTheme v-locale--is-ltr v-dialog v-dialog--fullscreen menu-full-popup v-overlay--scroll-blocked"
+            aria-modal="true" role="dialog" style="z-index: 2400">
+            <div class="v-overlay__scrim"></div>
+            <div class="v-overlay__content">
+                <div class="allmenu">
+                    <div class="allmenu_inner">
+                        <div class="allmenu_head">
+                            <div class="logo_title">
+                                <a aria-current="page" href="/main"
+                                    class="router-link-active router-link-exact-active"><img alt="" class="logo"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAABICAYAAADbPm9XAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA+TSURBVHgB7Z09kBxHFcf/e3bZFFDFOYJMbRyDTiGRR1UYK7OUm/JcBOVEuqLsEO2lUC6dEspEWlWRS04ofwQaR4Q+kRvaIZHlAAonXuZ/s8Od9nb6dU/3fO2+HzX4tNPz/frfb16/7pmhb7LlPl7CbcyQl/8yq19Pz5YZjvHxzEJRFEUpJbEvamEG7pRH3XeUPCnX31ehVhRl1+lHoH+5zPACHuDcY5aw+K70pj+bLaAoirKjdCvQbywPsId75V8Z2kGhvlUK9SkURVF2jG4EmuGMl3EXDGekYaHxaUVRdo30Av3m8jaWmAtx5nZwv5/OjqEoirIDpBPoKs7McMYBukXj04qi7ATxAn1jaUrPlh2AGfqlKM/+UMMeiqJsK+0F2j9trms0Pq0oylbSTqDfWObllvcGFuaL2HK5j09mJ1AURdkSwgS6ijMzOyPDOLFluOWo7Eh8DEVRlInjJ9BV2hw7AHNMAw17KIoyedwCPZ44czuYlreHhyrUiqJMkWaBDh+ePVY0LU9RlElyWaCHS5vrGlte7XX1phVFmQrnAp1+ePZY0fi0ouweDNG6tI3z/YwuuaAS6MprfoLphzN8UW9aUXYLUy7/dKxflMshRsaLZ/+/3IpYcwhskB6V/72GbjBodz/t6r/PVouyndCbi5kS4dnaomwpL54NOtm+eLMPB3hzeaejwS15udxFHKx4p6vlc3Bo+3ZXRtcbXIERejcR3CyXB0hHgcpO7uO8kVe2gL3yf+8gAfs/KGvXj9E5PA6XRLyF8UIvK0MVN6O3/zWw1W86RliUZjJUdsJX+F17G95q9spX/ejZ5yjMT/5QLQnFc+NxvvhTtSRqDLKzztHpkEMroeImR2Uj297ZvxPsxQ5AqcX54LXq73u/RWfcfbs6Rn3MJCL9ffwI0yNHVQljwyjK9sKRvyrSE2cPEWwSyvyN0ipuIjm3b1X7dh17B5mjCn9Mb5Sn0gcxn5tTRkBrgWYoo0kga083FdzX/O3Nv3cdVpkAbA7ZwaYivT2wM9g2LKEdxfqWNWFaCzRDGU0ivP/D0q37PZLhEuGuwyodcb1cXl1brq1+53JULg/h3yPPfoR7ULYFPv9XG5ZXUI1foL3w82+SYGdQL3qyvIgWMNRwMdywCcakKZxHHyIKH2+c5/L0S+BkOpOMMn78lWN9ceHvHJUXZOCG5Z6WS0zaIL1weuRXV8e76JWfrvZfYHPDkaMZi+eviRzg+Vxg1xuAcey/TkUMIVsdu77OGopdfY3Fhu3Wz3mdx+gvFbK+7gUgDjLjMy0QTp2v/RYu2wOvs07/PG04ZtMz5bZta2uMjXZFho7sKVigKZZ33/Yrm/2s8nyf/RutkRqCGp7T4rO4Y42UxWqZQ35d5XoavkUYBufxyqZKleH5czpeO44rr5fli7XfWMl8X7+NY/88D1+B5syMOdyVoj4vu9r3YsO6JiiUfQl0jUWVI/7EUcYgDNpANYulu+Gse5vqHOzFhXXcPmvYziJcoDNAnIv+4roFLttoajq3p+AQh298+WEpltffjxfMa++WT/8fcjmGVe7+GtvMHPJgDVam0Jgjy9Ojd3k86+SYVhaJQXW+J/AfwcdtHqy2Mxg3FEhXwxCSqUQ74DXP4W8PvKcP0E36J8+BzgMboCxguxzd2ahBT/YUJNAUZh+Ptvh7We6DNN4s93H9PT+RZvbIlmd1LFDFJ13k8KtYLEOjn6M9c4w/i+SdcvkC7YXDrLa/ifGSasg3xSzmeeZA0jl9zGp/d9CeOdKO2uzVnoIE2ie0Yf8F3DpGUijS3Cf3LeEbEpkwbLULoYyPQYd6JE3Q0MbaQclzWyC+AeH2rORXMV5c1/gUMhTnOeIxSJNVVDsQvh6qixxpbLR3ewoS6OzncpkUYY1NUJwPP5DL3R6zn5MOqQmUhu/TWFMYfk2O8WGQ1nOqO6fGCJ+lSzRO4SZHGnGuMYi3r3tIGy6JfXYGA9iTdychxVkKH7CTzsfLbQtDJ1xcDQVj0VzPcltMgarTwTSs5+9XsDlThEYR8sp48fXZIB11ri889u16hW/6PfRV3cLvXMaIK87K+1M41huExWkvPot9dBPeyhHW6HdloxcZxJ68PWgf7/n4L+gcn2Mc/BS7wEfC+usNv/u86tHYj1f7YN5tnYM7W/1WIJ4TPJ/fax1lT9GcF3yyoXwOPw/Ooorpv7Jhv4cY/8xwBlUYwOWJSTPc+aRwkgKX7YF/Mx/7IdJh4Ndg9GGjNTkGsidvD/qqIHr0WLv0nteP4/Lms6uTyoluS4EqzacJs+G3HHJltKgM3KL5uAX887OHwKeCU1T4JrHJA7cIS29MDUNUrwtlpBxaUsAdujCQPVXeH4rOomH9Kc5DJCk6CDOMz0YHsydvgTY/ca//vMeQAo9lHJ2BV3Zjfg4prnhlw29SbNrCbfgXWaCqBOyR7uI1ty0Z5ArJ5juHH/PVf/sU6Qzx8BoPhTI5ZA7hl7NsUXnTMRkORLrPFv3aaIYB7ck7xCHNd9GH9+x7rB2Zm+OZsP6VtX8byBU/NLHfQu6w7BufRkhKVVxnjrSvzF3ChpuieguyjUjzoTM8EvIuyuNdR3syyGLYt41KHXkWHdpT1Gx2yqBIlW99cIL0OsyKvUA4jAEXGA/SdYZW8IvbjR2LyyP6mjCQ79UJ2p9DG7q0Uam+NCGFmjq1J2+BllLn+uyYk+LhfXrzEyIT1retVETqsOwLvsZKlbxt70SB8XvRBuej1XKhrHSf+Ewt2tH2HktiGGOjXTUandqTt0BzMiIXV19DbxwIx/pm++bj2ERoTE1Kipdi2i7G0iXr02nW1pMin2MaGFRCfVco46JAewq0E3cjrI+x0QXCGdyevDsJOdTaFdxjGl4f+cc++diFz7ip6WOE9et3QRL0GOO3qAx16M5C6fjfIA6LfpBivwbVtTKGnDnKzVFd80nDPlzE2EO9vUEYBvI+22IRbqOD25O/QH8pl+FQ8OJ9dIrP3M8+83ZsAVLrbtf+3bV4TkGgv0YcFv1AISo8ylF4DdzpbfeweUrQrp9VG/Eam40aYX3n9uQd4qBnLMWh6d3e/AU6g/NsHHjEn7d8FGGNFK+L9YCUaWBRZU64XrXbzEMxdGOrIDCL4/4jucyD33Uzo5zvl1M4zemOkAnr1wVaipVdQRwGwyNdo/TWIWEwTizcnWAZLguudK9iBbqNPY3NRge3pyCBPnkke9GcCyP1x1xDvj242A2BzuF+uAUuG5cUmY/NXx0D0luDQZzwSG8tQ/JYWJ+v/dsK5WOvtY14WWF93zY6uD0FCTTF2ceLTvnF7ZB9cZ6OHUixM5BHIW2aG0HyBqQBHl1tmxIfr/Am2pNhvEjXbtb+LYkP71Nb8clbbis5EX3b6OD2FDxQhV60jwjWwhqLrzjznHbEe5amYbTYnFIkeVgZ2gmQwXiEixWqgJu2Q7Y574nBeJEEcX3gkiTQ3N8dtKPtPZbOKUO/Njq4PQULNL1on3mZSYp4sI/HTnbAe2aF4d2QWuymEUo0fskjeIBwz6eLzxzFIOWWGoR3mhmknS+5C6SQwnpWhY/43EZ4qCJmciLJiSB92+ig9tRqqDezJCThfPy38gwSTD/KWemkrAyK85Z7zxn8PpNj0ZyQzwr5EG4M/GckYyV5gH68ZxNQ9sSjDD1DX8+HApXiCyFdwnPzmWRoHWl0Xe0UGPgR+1UWC7nRMOjXRge1p9Zzcdz5c7Nw0pM9+hDJOHR835D52SkaghFiUD34J/AzSAqw1Ini46HUBpQ7ymSoGgxXmVBcr7cG/pXMxzMkc7g9q1r0fMVgKAz8znHT/aU9WMj759Bxl2ecIf77ljU+Q7L7tNFB7WmGN5dLtIRZFU/+eDk3md8PpAedEuZYr8e0Kc7Rn9h6obxZf519hbTM4W5RC8c6PkiDcI+NM5gtPMrRI7gNPyyqc63vD+OY9OINwlhAnvrS57woKOthmo9wueExCJtissDzr7IcFp8h/BkYbP6KzTo53J9P4vVIHWZ8FhSqDDIW1aTxbc7lIrVYPW1xDr7nQ0K+l2nRvY0aDGRPUQJ9toeyA+/R3XORZrihK4/25DdlDb5V/Z1EnMkwAp0aX3EmNJLYOXtDWUAW6AxVxQyldAc2em58+2gzQCMGgzQCnRrJPkIEMQUWboHO0M4WYljAbaOD2NMelnGfa2c44/p7lcfMv7sMN3DfHMbNYyX7OO1/osfTD0kd1lgEbiOJZSgW8RSJ9lNzgvSzz1lMD3rjC6EM7cEiLRbtKRA+x7JElM5hIHvaS3FQCiXDGtfeRafwOGwMeKxEXw4/RTGLfXBDUaD6gkWBcAqkE2mf2LcvqRsOvm+dIg2MjUqdrGOD1+5zTy38v1Liw1GCfVEQj5EGi8oWYundnvbK/8XMsfocz3qY5jPpMWbprr1HClSVKbZCLVAZnEV7LNJW7AJpJ8avG49YYaWdtM0JHgqeMxtwXwfEIv5Z1m9nPpkPPswRbw8W8XZe07s97eHjWYHpfM4nJba89gWmAQ2DD7UW5gJpeIz2BsdtKQCpPIqaOdKKPu9djnav8dyWlXtK4lygun9tztmiig0fI/xeFQgPt/kwh/zV9yYKVOeU0kZ7tadqutFvy41eKoPys+jJP6aCLa811Wv55v3HiahFNbDgFOljs5uOlaOqCFxeR3MHIsvWWRPF2roCzYTO0F2gqpS0R/bIsxd833FOPixWS45q2G/WUI6ViPf9o1X5Z2vHKtCMb3+Gb+qW777YMclz3pTl0oY5qmvP4B6s8mx1TDbwxdo61zO3CMOisocc7mcnnZN1bBfaF7VAD/Y0+/+f2XIfL589GN8UrKmyKBukownHnvuAYnixUvJeWaSp/GOC13hR+C2m2RHYNev2QCyGu1f1+Zi1308x7DS7ye1pdumXG0uD70qhno1mApxUFOU1Ha9COoqiKKNn1rjmxjLHMmpc/ThgGuFe6TFPJ96sKIpyxkwscWM5L0WO3rTBlKiE+T7+W/YoazhDUZQJIgs0mV7Yg+GMw9JrtlAURZkofgJdQ6FejnryGLsS5gKKoigTJ0yga8YWn2Y4gx2An8xOoCiKsiW0E2jCtLzv4c5KqIfkPr4twy8aZ1YUZctoL9A1w8WnNW1OUZStJl6ga361vFnuTfpeXgps6bUf4dPZYyiKomwx6QS6pqv4tKbNKYqyY6QXaJI+7PG43NeRps0pirJLdCPQNZVQ3yuPchPt0Dizoig7S7cCXRMa9tC0OUVRlJ4EuobDxr/D7fKo+41lKMwaZ1YURelZoEk1GpH5069fmH/agvOlzkph1jizoijKGf8DiG2AiwFzWEAAAAAASUVORK5CYII=" /></a>
+                            </div>
+                            <div class="allmenu-login-wrap">
+                                <ul class="login-txt-box">
+                                    <li>
+                                        <a href="/main/login.html" class="menu-login"><i
+                                                class="icon-login mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i>
+                                            로그인
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/mem/memtype" class="menu-join"><i
+                                                class="icon-join mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i>
+                                            회원가입
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="allmenu_list_wrap">
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>Data서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>솔루션서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>광고서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>API서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>커뮤니티</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>DataBada</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/shc/info/cont/01" class="">DataBada </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/shc/data/cont/01" class="">신한 DataUniverse </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>MY</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item"><a href="/gin" class="">MY계약 </a></li>
+                                    <li class="item"><a href="/gin" class="">관심상품 </a></li>
+                                    <li class="item"><a href="/gin" class="">MY문의 </a></li>
+                                    <li class="item"><a href="/gin" class="">알림 </a></li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list mo-customer">
+                                <h2 class="title"><span>고객센터</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/csc/anc?store=init" class="">공지사항 </a>
+                                    </li>
+                                    <li class="item"><a href="/csc/faq" class="">FAQ</a></li>
+                                    <li class="item">
+                                        <a href="/csc/qna?store=init" class="">고객문의 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="customer-box">
+                                <li>
+                                    <a href="/csc/anc?store=init" class="notice">공지사항 </a>
+                                </li>
+                                <li><a href="/csc/faq" class="faq">FAQ</a></li>
+                                <li>
+                                    <a href="/csc/qna?store=init" class="customer-center">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button"
+                            class="v_close_btn v-btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close">
+                            <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                                class="v-btn__content" data-no-activator=""
+                                onclick="window.location='./main/mypage.html'"><span
+                                    class="sr-only"></span></span><!----><!---->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button"
+        class="v_btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close"><span
+            class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span class="v-btn__content"
+            data-no-activator=""><span class="sr-only"></span></span><!----><!----></button>
+
+
+
+    <div class="main-wrap">
+        <div class="visual-layout-area mobile-wrap">
+            <div class="my-login-wrap">
+                <div class="outlogin-box login-box"><span class="main-login-photo"><img alt=""
+                            src="data:image/png;base64,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"></span>
+                    <p class="login-txt">로그인 후<br>나만의 맞춤 정보를 이용하세요.</p><button type="button"
+                        class="v-btn v-theme--DefaultTheme bg-primary v-btn--density-default rounded-lg v-btn--size-large v-btn--variant-flat"><span
+                            class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content" onclick="window.location='./main/login.html'">로그인
+                        </span><!----><!----></button>
+                </div>
+            </div>
+        </div>
+        <div class="main-search-wrap">
+            <div class="main-search-inner">
+                <div class="input-wrap">
+                    <div
+                        class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-text-field">
+                        <!---->
+                        <div class="v-input__control">
+                            <div
+                                class="v-field v-field--appended v-field--center-affix v-field--no-label v-field--variant-outlined v-theme--DefaultTheme rounded-lg v-locale--is-ltr">
+                                <div class="v-field__overlay"></div>
+                                <div class="v-field__loader">
+                                    <div class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                        role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"
+                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);">
+                                        <!---->
+                                        <div class="v-progress-linear__background bg-primary" style="width: 100%;">
+                                        </div>
+                                        <div class="v-progress-linear__indeterminate">
+                                            <div class="v-progress-linear__indeterminate long bg-primary"></div>
+                                            <div class="v-progress-linear__indeterminate short bg-primary"></div>
+                                        </div><!---->
+                                    </div>
+                                </div><!---->
+                                <div class="v-field__field" data-no-activator=""><!----><label
+                                        class="v-label v-field-label"
+                                        for="input-128"><!----><!----></label><!----><input placeholder="상품명, 해시태그"
+                                        size="1" type="text" id="input-128" aria-describedby="input-128-messages"
+                                        class="v-field__input"><!----></div>
+                                <div class="v-field__clearable" style="display: none;"><i
+                                        class="mdi-close-circle mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default v-icon--clickable"
+                                        role="button" aria-hidden="false" aria-label="Clear "></i></div>
+                                <div class="v-field__append-inner"><!----><!----></div>
+                                <div class="v-field__outline">
+                                    <div class="v-field__outline__start"></div><!---->
+                                    <div class="v-field__outline__end"></div><!---->
+                                </div>
+                            </div>
+                        </div><!----><!---->
+                    </div>
+                    <button type="button"
+                        class="v-btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-search"><span
+                            class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content" data-no-activator=""><span
+                                class="sr-only">검색</span></span><!----><!----></button>
+                </div>
+                <div class="hashtags">
+                    <div class="hashtag cursor-pointer" href="javascript:;"> #병원</div>
+                    <div class="hashtag cursor-pointer" href="javascript:;"> #진료과목</div>
+                    <div class="hashtag cursor-pointer" href="javascript:;"> #의사</div>
+                    <div class="hashtag cursor-pointer" href="javascript:;"> #지역</div>
+                </div>
+            </div>
+        </div>
+        <div class="main_card_wrap">
+            <div class="main_card_inner">
+                <a class="v_btn v_theme_DefaultTheme  btn_size_default card_box" href="/serv/data/prod/srch">
+                    <span class="v_btn_overlay"></span>
+                    <span class="v_btn_underlay"></span>
+                    <span class="v_btn_content" data-no-activator="">
+                        <div class="title_area">
+                            <span class="card_stit">다양한</span>
+                            <strong class="card_title">Data서비스</strong>
+                        </div>
+                        <i class="v-icon notranslate v_theme_DefaultTheme card_icon ico_main_data"
+                            aria-hidden="true"></i>
+                        <span class="card-text">Data One-Stop Service</span>
+                        <i class="icon_card_arrow mdi v-icon notranslate v_theme_DefaultTheme v-icon--size-default"
+                            aria-hidden="true"></i>
+                    </span>
+                </a>
+                <a class="v_btn v_theme_DefaultTheme  btn_size_default card_box" href="/serv/data/prod/srch">
+                    <span class="v_btn_overlay"></span>
+                    <span class="v_btn_underlay"></span>
+                    <span class="v_btn_content" data-no-activator="">
+                        <div class="title_area">
+                            <span class="card_stit">QueDoc</span>
+                            <strong class="card_title">병원 예약 서비스</strong>
+                        </div>
+                        <i class="v-icon notranslate v_theme_DefaultTheme card_icon ico_main_data"
+                            aria-hidden="true"></i>
+                        <span class="card-text">Data One-Stop Service</span>
+                        <i class="icon_card_arrow mdi v-icon notranslate v_theme_DefaultTheme v-icon--size-default"
+                            aria-hidden="true"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="v-footer v-theme--DefaultTheme footer" style="height: auto;">
+        <div class="foot-inner">
+            <div class="bottom-logo"><span class="sr-only">QueDoc</span></div>
+            <div class="addr-wrap">
+                <ul>
+                    <li><a href="javascript:;">이용약관</a></li>
+                    <li><a href="https://www.shinhancard.com/pconts/html/helpdesk/personProtect/MOBFM170/1225763_2386.html"
+                            target="blank">개인정보처리방침</a></li>
+                </ul>
+                <address>
+                    <p><span>서울특별시 중구 을지로 100 (을지로2가, 파인에비뉴 A동) 신한카드</span></p>
+                    <p><span>이메일: QueDoc@SWCamp.com</span></p>
+                </address>
+                <p class="copyright">Copyright 2024 QueDoc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let isMenuOpen = false;  // 메뉴 상태를 추적하는 변수
+
+        // 메뉴 열기 버튼 클릭
+        const menu_btn = document.querySelector(".v_menu_bar");
+        menu_btn.addEventListener("click", function (event) {
+            console.log("click");
+
+            if (!isMenuOpen) {  // 메뉴가 열리지 않은 상태에서만 열도록
+                // 메뉴를 열 때 display 값을 'block'으로 설정
+                document.querySelector('.v-overlay__content').style.display = 'block';
+                document.querySelector('.v-overlay-container').style.cssText = 'display: visible;';
+            
+                document.querySelector('.header').style.cssText = 'z-index: -1;';
+                
+
+                isMenuOpen = true;  // 메뉴 상태를 '열림'으로 변경
+            }
+        });
+
+        // 메뉴 닫기 버튼 클릭
+        const menu_close_btn = document.querySelector(".v_close_btn");
+        menu_close_btn.addEventListener("click", function (event) {
+            console.log('hey');
+
+            // 메뉴가 열려 있을 때만 닫기
+            if (isMenuOpen) {
+                document.querySelector('.v-overlay__content').style.display = 'none';
+                document.querySelector('.v-overlay-container').style.cssText = 'display: none;';
+                
+                document.querySelector('.header').style.cssText = 'z-index: 1;'; // 필요에 따라 z-index 값 복구
+                
+
+                isMenuOpen = false;  // 메뉴 상태를 '닫힘'으로 변경
+            }
+        });
+    </script>
+
+</body>
+
+
+</body>
+
+</html>
