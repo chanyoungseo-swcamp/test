@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../css/hosdetail.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/vuetify-theme.css">
+
+    <title>병원 정보</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <div class="header_wrapper">
+                <button class="btn_logo" type="button">QueDoc</button>
+                <ul>
+                    <li><a href="/#" class="">로그인</a></li>
+                    <li><a href="/#" class="">회원가입</a></li>
+                    <li><a href="/#" class="">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="header_menu">
+                <h1 class="logo_title">
+                    <a aria-current="page" href="/#" class="router-link-active router-link-exact-active"
+                        title="DataBada"><img alt="" class="logo"
+                            src="data:image/png;base64,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" /></a>
+                </h1>
+                <nav class="gnb_menu">
+                    <ul class="menu_list">
+                        <li><a href="javascript:;">Data서비스</a></li>
+                        <li><a href="javascript:;">솔루션서비스</a></li>
+                        <li><a href="javascript:;">광고서비스</a></li>
+                        <li><a href="javascript:;">API서비스</a></li>
+                        <li><a href="javascript:;">커뮤니티</a></li>
+                    </ul>
+                    <div class="gnb_menu_wrap">
+                        <div class="gnb_menu_inner">
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">Data서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <span class="title-link">솔루션서비스</span>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <a class="title-link" href="javascript:;">광고서비스</a>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">API서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">커뮤니티</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="util-area">
+                    <a class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        href="/#" title="MY"><span class="v-btn__overlay"></span><span
+                            class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator="" onclick="window.location='/main/mypage.html'"><i
+                                class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-my"
+                                aria-hidden="true"><!----></i></span><!----><!----></a><button type="button"
+                        class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        title="전체메뉴">
+                        <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content v_menu_bar" data-no-activator="">
+                            <i class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-allmenu"
+                                aria-hidden="true"><!----></i>
+                            </svg>
+                        </span><!----><!---->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="app" data-v-app="">
+        <div data-v-67ad47e2=""
+            class="v-application v-theme--DefaultTheme v-layout v-layout--full-height v-locale--is-ltr wrap">
+            <div class="v-application__wrap"><!---->
+
+                <div class="menu-dim"></div><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                <main data-v-67ad47e2="" class="v-main container"
+                    style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;">
+                    <div data-v-67ad47e2="" class="ly-inner">
+                        <div class="sub-group data-service">
+                            <div class="sub-title-area">
+                                <h4 class="sub-title">병원 정보</h4>
+                            </div>
+                            <div class="product-area">
+                                <div class="top-info">
+                                    <div class="prod-flag-wrap"><span class="blue flag">소아청소년과</span><span
+                                            class="violet flag">내과</span><span class="pink flag">이비인후과</span><span
+                                            class="violet flag">피부과</span><span class="blue flag">오늘휴진</span></div>
+                                    <div class="favorites"><button type="button"
+                                            class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                            style="height: auto; min-width: auto;"><span
+                                                class="v-btn__overlay"></span><span
+                                                class="v-btn__underlay"></span><!----><span class="v-btn__content"
+                                                data-no-activator=""><i
+                                                    class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                    aria-hidden="true"></i></span><!----><!----></button></div>
+                                </div>
+                                <div class="middle-info">
+                                    <div class="text">
+                                        <div title="전국 권역 X 업종별 소비자 결제 트렌드" class="subtitle-22">튼튼소아청소년과의원
+                                        </div>
+                                        <div title="전국 소비자의 업종별 결제 트랜드 분석 데이터" class="text-18">서울특별시 동작구 
+                                        </div>
+                                    </div>
+                                    <!--<div class="img"><img
+                                            src="https://databada.shinhancard.com/fil/dispd/2645332e-ec3e-4c70-970e-ff8e98472cbe.png"
+                                            alt="썸네일이미지"></div> -->
+                                </div>
+                                <div class="bottom-info"><span class="hashtag text-16">#어린이 국가예방접종</span><span
+                                        class="hashtag text-16">#독감주사</span><span
+                                        class="hashtag text-16">#영유아검진</span><span
+                                        class="hashtag text-16">#주차장</span><span class="hashtag text-16">#전문의</span>
+                                </div>
+                                <div class="btn-area"><!----><button type="button"
+                                        class="v-btn v-theme--DefaultTheme bg-primary v-btn--density-default rounded-md v-btn--size-large v-btn--variant-flat"><span
+                                            class="v-btn__overlay"></span><span
+                                            class="v-btn__underlay"></span><!----><span class="v-btn__content"
+                                            data-no-activator="">예약하기 </span><!----><!----></button></div>
+                            </div><!----><!---->
+                            <div class="product-detail">
+                                <div class="detail-info">
+                                    <div class="title"><i class="v-icon notranslate v-theme--DefaultTheme icon-prod"
+                                            aria-hidden="true"><!----></i> 병원 소개 </div>
+                                    <div class="desc">튼튼소아청소년과의원은 환자 중심의 의료 서비스를 제공하며, 소아과, 피부과, 내과 등 다양한 진료 과목을 통해 전문적인 치료와 상담을 제공합니다. 최신 의료 장비와 따뜻한 진료 환경을 갖추어, 가족 모두가 안심하고 찾을 수 있는 병원이 되기 위해 노력하고 있습니다.</div><!----><!----><!----><!---->
+                                    <div class="detail-info">
+                                        <div class="group-setting-info">
+                                            <div class="box-title">병원 위치</div><a href="/gin" class="banner-link">
+                                                <div class="member-only">
+                                                    <div class="title">찾아오시는 길</div>
+                                                    <div class="text">빠르게 찾아오시는 법 : 어쩌고 저쩌고</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div><!----><!---->
+                                <hr class="v-divider v-theme--DefaultTheme divide" aria-orientation="horizontal"
+                                    role="separator">
+                                <div class="detail-info">
+                                    <div class="title"><i class="v-icon notranslate v-theme--DefaultTheme icon-data"
+                                            aria-hidden="true"><!----></i> 의료진 정보 </div>
+                                    <div class="table-overflow-x">
+                                        <div class="v-table v-theme--DefaultTheme v-table--density-default"><!---->
+                                            <div class="v-table__wrapper">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 140px;">
+                                                        <col style="width: 140px;">
+                                                        <col style="width: 140px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">성함</th>
+                                                            <th scope="col">진료과목</th>
+                                                            <th scope="col">휴무일</th>
+                                                            <th scope="col">약력보기</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>김철수</td>
+                                                            <td>호흡기 질환, 폐질환</td>
+                                                            <td>매주 월요일</td>
+                                                            <td>보기</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>박영희</td>
+                                                            <td>구강 질환</td>
+                                                            <td>매주 화요일</td>
+                                                            <td>보기</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>김정우</td>
+                                                            <td>눈 질환, 귀 질환</td>
+                                                            <td>매주 목요일</td>
+                                                            <td>보기</td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div><!---->
+                                        </div>
+                                    </div>
+                                </div><!----><!----><!---->
+                                <hr class="v-divider v-theme--DefaultTheme divide" aria-orientation="horizontal"
+                                    role="separator">
+                                <div class="inquiry-area">
+                                    <div class="title">병원 공지사항</div>
+                                    <div class="inquiry-box">
+                                        <div class="text"> 
+                                            [필독!] 독감 예방주사 예약 시 예약 메모에 "독감" 이라고 적어서 큐닥에 접수해주세요
+                                            <br>
+                                            궁금하신 점은 튼튼소아청소년과의원에 문의주세요!
+                                        </div>
+                                        <div class="ml-auto"><button type="button"
+                                                class="v-btn v-theme--DefaultTheme bg-Tertiary v-btn--density-default rounded-md v-btn--size-large v-btn--variant-flat"><span
+                                                    class="v-btn__overlay"></span><span
+                                                    class="v-btn__underlay"></span><!----><span class="v-btn__content"
+                                                    data-no-activator="">공지사항 보기
+                                                </span><!----><!----></button><button type="button"
+                                                class="v-btn v-theme--DefaultTheme bg-Tertiary v-btn--density-default rounded-md v-btn--size-large v-btn--variant-flat"><span
+                                                    class="v-btn__overlay"></span><span
+                                                    class="v-btn__underlay"></span><!----><span class="v-btn__content"
+                                                    data-no-activator="">문의하기 </span><!----><!----></button></div>
+                                    </div>
+                                </div>
+                                <div class="detail-info prod-pick">
+                                    <div class="title"><i
+                                            class="v-icon notranslate v-theme--DefaultTheme icon-recommend"
+                                            aria-hidden="true"><!----></i> 주변의 다른 병원 </div>
+                                    <div class="service-list-area">
+                                        <div class="v-row">
+                                            <div class="v-col-md-6 v-col-12">
+                                                <div
+                                                    class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer">
+                                                    <!---->
+                                                    <div class="v-card__loader">
+                                                        <div class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                            role="progressbar" aria-hidden="true" aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                            style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);">
+                                                            <!---->
+                                                            <div class="v-progress-linear__background"
+                                                                style="width: 100%;"></div>
+                                                            <div class="v-progress-linear__indeterminate">
+                                                                <div class="v-progress-linear__indeterminate long">
+                                                                </div>
+                                                                <div class="v-progress-linear__indeterminate short">
+                                                                </div>
+                                                            </div><!---->
+                                                        </div>
+                                                    </div><!----><!---->
+                                                    <div class="top-area">
+                                                        <div class="category-title text-16">병원 정보</div>
+                                                        <div class="icon-area">
+                                                            <div class="badge"><!----><!----></div>
+                                                            <div class="favorites"><button type="button"
+                                                                    class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                    title="관심상품"
+                                                                    style="height: auto; min-width: auto;"><span
+                                                                        class="v-btn__overlay"></span><span
+                                                                        class="v-btn__underlay"></span><!----><span
+                                                                        class="v-btn__content" data-no-activator=""><i
+                                                                            class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                            aria-hidden="true"></i></span><!----><!----></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="middle-area">
+                                                        <div class="prod-flag-wrap"><span
+                                                                class="blue flag">이비인후과</span><span
+                                                                class="violet flag">내과</span><span
+                                                                class="pink flag">안과</span><span
+                                                                class="violet flag">정신과</span><span
+                                                                class="blue flag">외과</span></div>
+                                                        <div title="전국 권역별 F&amp;B업종 매출 정보"
+                                                            class="subtitle-22 text-truncate">김종합병원
+                                                        </div>
+                                                        <div class="text-area">
+                                                            <div title="전국 권역별 F&amp;B 관련업종(한식,일반대중음식 등) 결제 트렌드 인사이트 제공"
+                                                                class="text text-twolines">서울시 마포구소재 종합병원</div>
+                                                            <!--<div class="img-thumbnail"><img
+                                                                    src="https://databada.shinhancard.com/fil/dispd/eb9bc378-5d13-4164-98eb-ca5fbd074ea7.png"
+                                                                    alt="썸네일이미지"></div>-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="bottom-area text-truncate"><span
+                                                            class="hashtag text-16">#주차장</span><span
+                                                            class="hashtag text-16">#전문의</span><span
+                                                            class="hashtag text-16">#최신 의료기기</span><span
+                                                            class="hashtag text-16">#모니터링</span><span
+                                                            class="hashtag text-16">#건강검진</span></div><!----><span
+                                                        class="v-card__overlay"></span><span
+                                                        class="v-card__underlay"></span>
+                                                </div><!----><!---->
+                                            </div>
+                                            <div class="v-col-md-6 v-col-12">
+                                                <div
+                                                    class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer">
+                                                    <!---->
+                                                    <div class="v-card__loader">
+                                                        <div class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                            role="progressbar" aria-hidden="true" aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                            style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);">
+                                                            <!---->
+                                                            <div class="v-progress-linear__background"
+                                                                style="width: 100%;"></div>
+                                                            <div class="v-progress-linear__indeterminate">
+                                                                <div class="v-progress-linear__indeterminate long">
+                                                                </div>
+                                                                <div class="v-progress-linear__indeterminate short">
+                                                                </div>
+                                                            </div><!---->
+                                                        </div>
+                                                    </div><!----><!---->
+                                                    <div class="top-area">
+                                                        <div class="category-title text-16">병원정보</div>
+                                                        <div class="icon-area">
+                                                            <div class="badge"><!----><!----></div>
+                                                            <div class="favorites"><button type="button"
+                                                                    class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                    title="관심상품"
+                                                                    style="height: auto; min-width: auto;"><span
+                                                                        class="v-btn__overlay"></span><span
+                                                                        class="v-btn__underlay"></span><!----><span
+                                                                        class="v-btn__content" data-no-activator=""><i
+                                                                            class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                            aria-hidden="true"></i></span><!----><!----></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="middle-area">
+                                                        <div class="prod-flag-wrap"><span
+                                                                class="blue flag">내과</span><span
+                                                                class="blue flag">내분비과</span><span
+                                                                class="pink flag">소아과</span><span
+                                                                class="violet flag">이비인후과</span><span
+                                                                class="blue flag"></span></div>
+                                                        <div title="전국 권역X업종 단위 상권정보" class="subtitle-22 text-truncate">
+                                                            김내과</div>
+                                                        <div class="text-area">
+                                                            <div title="전국 지역별 업종별 추정 매출 및 소비자 정보 제공"
+                                                                class="text text-twolines">서울 동작구 소재 내과전문의 의원
+                                                            </div>
+                                                            <!--<div class="img-thumbnail"><img
+                                                                    src="https://databada.shinhancard.com/fil/dispd/b4799502-61d2-4e62-be6e-4fc83abb0df7.png"
+                                                                    alt="썸네일이미지"></div> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="bottom-area text-truncate"><span
+                                                            class="hashtag text-16">#주차장</span><span
+                                                            class="hashtag text-16">#전문의</span><span
+                                                            class="hashtag text-16">#소아과진료 가능</span><span
+                                                            class="hashtag text-16">#휴무일 없음</span><span
+                                                            class="hashtag text-16">#독감 예방주사</span></div><!----><span
+                                                        class="v-card__overlay"></span><span
+                                                        class="v-card__underlay"></span>
+                                                </div><!----><!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!----><!---->
+                            </div>
+                            <div class="btn-list"><button type="button"
+                                    class="v-btn v-theme--DefaultTheme bg-primary v-btn--density-default rounded-lg v-btn--size-x-large v-btn--variant-flat"><span
+                                        class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                                        class="v-btn__content" data-no-activator="">병원 목록 </span><!----><!----></button>
+                            </div>
+                        </div><!----><!----><!----><!---->
+                    </div>
+                </main>
+                <footer class="v-footer v-theme--DefaultTheme footer" style="height: auto;">
+                    <div class="foot-inner">
+                        <div class="bottom-logo"><span class="sr-only">QueDoc</span></div>
+                        <div class="addr-wrap">
+                            <ul>
+                                <li><a href="javascript:;">이용약관</a></li>
+                                <li><a href="https://www.shinhancard.com/pconts/html/helpdesk/personProtect/MOBFM170/1225763_2386.html"
+                                        target="blank">개인정보처리방침</a></li>
+                            </ul>
+                            <address>
+                                <p><span>서울특별시 중구 을지로 100 (을지로2가, 파인에비뉴 A동) 신한카드</span></p>
+                                <p><span>이메일: QueDoc@SWCamp.com</span></p>
+                            </address>
+                            <p class="copyright">Copyright 2024 QueDoc. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+                <!----><!----><button type="button"
+                    class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat top-btn"
+                    style="display: none;"><span class="v-btn__overlay"></span><span
+                        class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator=""><i
+                            class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default btn-arrow-top"
+                            aria-hidden="true"><!----></i><span
+                            class="sr-only">위로가기</span></span><!----><!----></button>
+            </div>
+        </div>
+    </div>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-W96CH96V"></script>
+    <div class="v-overlay-container"></div>
+</body>
