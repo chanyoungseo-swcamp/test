@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="ko" , lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data상품</title>
+        <!-- 상대 경로로 CSS 연결 -->
+        <link rel="stylesheet" href="\css\code\search.css">
+        <link rel="stylesheet" href="css\code\user_info_change.css">
+        <link rel="stylesheet" href="css\code\BasePupAlert-Bh9dqm_k.css">
+        <link rel="stylesheet" href="css\code\DssMain-DHfK64sD.css">
+        <link rel="stylesheet" href="css\code\footer.css">
+        <link rel="stylesheet" href="\css\code\header.css">
+        <link rel="stylesheet" href="\css\code\index-CmMXd5fQ.css">
+        <link rel="stylesheet" href="\css\code\login_box.css">
+        <link rel="stylesheet" href="\css\code\MainFooter-RtENNcis.css">
+    </head>
+    <body>
+        <div id="app" data-v-app><div data-v-67ad47e2
+                class="v-application v-theme--DefaultTheme v-layout v-layout--full-height v-locale--is-ltr wrap"><div
+                    class="v-application__wrap">
+                        <header class="header">
+        <div class="header_inner">
+            <div class="header_wrapper">
+                <button class="btn_logo" type="button">QueDoc</button>
+                <ul>
+                    <li><a href="./login.html" class="">로그인</a></li>
+                    <li><a href="./signup.html" class="">회원가입</a></li>
+                    <li><a href="/#" class="">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="header_menu">
+                <h1 class="logo_title">
+                    <a aria-current="page" href="/#" class="router-link-active router-link-exact-active"
+                        title="DataBada"><img alt="" class="logo"
+                            src="data:image/png;base64,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" /></a>
+                </h1>
+                <nav class="gnb_menu">
+                    <ul class="menu_list">
+                        <li><a href="javascript:;">Data서비스</a></li>
+                        <li><a href="javascript:;">솔루션서비스</a></li>
+                        <li><a href="javascript:;">광고서비스</a></li>
+                        <li><a href="javascript:;">API서비스</a></li>
+                        <li><a href="javascript:;">커뮤니티</a></li>
+                    </ul>
+                    <div class="gnb_menu_wrap">
+                        <div class="gnb_menu_inner">
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">Data서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <span class="title-link">솔루션서비스</span>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title">
+                                    <a class="title-link" href="javascript:;">광고서비스</a>
+                                </h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">API서비스</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb_menu_list">
+                                <h2 class="title"><span class="title-link">커뮤니티</span></h2>
+                                <ul class="dep1-list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="util-area">
+                    <a class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        href="/#" title="MY"><span class="v-btn__overlay"></span><span
+                            class="v-btn__underlay"></span><!----><span class="v-btn__content" data-no-activator="" onclick="window.location='/main/mypage.html'"><i
+                                class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-my"
+                                aria-hidden="true"><!----></i></span><!----><!----></a><button type="button"
+                        class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-x-small v-btn--variant-text"
+                        title="전체메뉴">
+                        <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content v_menu_bar" data-no-activator="">
+                            <i class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-allmenu"
+                                aria-hidden="true"><!----></i>
+                            </svg>
+                        </span><!----><!---->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="v-overlay-container" style="display: none;">
+        <div class="v-overlay v-overlay--active v-theme--DefaultTheme v-locale--is-ltr v-dialog v-dialog--fullscreen menu-full-popup v-overlay--scroll-blocked"
+            aria-modal="true" role="dialog" style="z-index: 2400">
+            <div class="v-overlay__scrim"></div>
+            <div class="v-overlay__content">
+                <div class="allmenu">
+                    <div class="allmenu_inner">
+                        <div class="allmenu_head">
+                            <div class="logo_title">
+                                <a aria-current="page" href="/main"
+                                    class="router-link-active router-link-exact-active"><img alt="" class="logo"
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAABICAYAAADbPm9XAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAA+TSURBVHgB7Z09kBxHFcf/e3bZFFDFOYJMbRyDTiGRR1UYK7OUm/JcBOVEuqLsEO2lUC6dEspEWlWRS04ofwQaR4Q+kRvaIZHlAAonXuZ/s8Od9nb6dU/3fO2+HzX4tNPz/frfb16/7pmhb7LlPl7CbcyQl/8yq19Pz5YZjvHxzEJRFEUpJbEvamEG7pRH3XeUPCnX31ehVhRl1+lHoH+5zPACHuDcY5aw+K70pj+bLaAoirKjdCvQbywPsId75V8Z2kGhvlUK9SkURVF2jG4EmuGMl3EXDGekYaHxaUVRdo30Av3m8jaWmAtx5nZwv5/OjqEoirIDpBPoKs7McMYBukXj04qi7ATxAn1jaUrPlh2AGfqlKM/+UMMeiqJsK+0F2j9trms0Pq0oylbSTqDfWObllvcGFuaL2HK5j09mJ1AURdkSwgS6ijMzOyPDOLFluOWo7Eh8DEVRlInjJ9BV2hw7AHNMAw17KIoyedwCPZ44czuYlreHhyrUiqJMkWaBDh+ePVY0LU9RlElyWaCHS5vrGlte7XX1phVFmQrnAp1+ePZY0fi0ouweDNG6tI3z/YwuuaAS6MprfoLphzN8UW9aUXYLUy7/dKxflMshRsaLZ/+/3IpYcwhskB6V/72GbjBodz/t6r/PVouyndCbi5kS4dnaomwpL54NOtm+eLMPB3hzeaejwS15udxFHKx4p6vlc3Bo+3ZXRtcbXIERejcR3CyXB0hHgcpO7uO8kVe2gL3yf+8gAfs/KGvXj9E5PA6XRLyF8UIvK0MVN6O3/zWw1W86RliUZjJUdsJX+F17G95q9spX/ejZ5yjMT/5QLQnFc+NxvvhTtSRqDLKzztHpkEMroeImR2Uj297ZvxPsxQ5AqcX54LXq73u/RWfcfbs6Rn3MJCL9ffwI0yNHVQljwyjK9sKRvyrSE2cPEWwSyvyN0ipuIjm3b1X7dh17B5mjCn9Mb5Sn0gcxn5tTRkBrgWYoo0kga083FdzX/O3Nv3cdVpkAbA7ZwaYivT2wM9g2LKEdxfqWNWFaCzRDGU0ivP/D0q37PZLhEuGuwyodcb1cXl1brq1+53JULg/h3yPPfoR7ULYFPv9XG5ZXUI1foL3w82+SYGdQL3qyvIgWMNRwMdywCcakKZxHHyIKH2+c5/L0S+BkOpOMMn78lWN9ceHvHJUXZOCG5Z6WS0zaIL1weuRXV8e76JWfrvZfYHPDkaMZi+eviRzg+Vxg1xuAcey/TkUMIVsdu77OGopdfY3Fhu3Wz3mdx+gvFbK+7gUgDjLjMy0QTp2v/RYu2wOvs07/PG04ZtMz5bZta2uMjXZFho7sKVigKZZ33/Yrm/2s8nyf/RutkRqCGp7T4rO4Y42UxWqZQ35d5XoavkUYBufxyqZKleH5czpeO44rr5fli7XfWMl8X7+NY/88D1+B5syMOdyVoj4vu9r3YsO6JiiUfQl0jUWVI/7EUcYgDNpANYulu+Gse5vqHOzFhXXcPmvYziJcoDNAnIv+4roFLttoajq3p+AQh298+WEpltffjxfMa++WT/8fcjmGVe7+GtvMHPJgDVam0Jgjy9Ojd3k86+SYVhaJQXW+J/AfwcdtHqy2Mxg3FEhXwxCSqUQ74DXP4W8PvKcP0E36J8+BzgMboCxguxzd2ahBT/YUJNAUZh+Ptvh7We6DNN4s93H9PT+RZvbIlmd1LFDFJ13k8KtYLEOjn6M9c4w/i+SdcvkC7YXDrLa/ifGSasg3xSzmeeZA0jl9zGp/d9CeOdKO2uzVnoIE2ie0Yf8F3DpGUijS3Cf3LeEbEpkwbLULoYyPQYd6JE3Q0MbaQclzWyC+AeH2rORXMV5c1/gUMhTnOeIxSJNVVDsQvh6qixxpbLR3ewoS6OzncpkUYY1NUJwPP5DL3R6zn5MOqQmUhu/TWFMYfk2O8WGQ1nOqO6fGCJ+lSzRO4SZHGnGuMYi3r3tIGy6JfXYGA9iTdychxVkKH7CTzsfLbQtDJ1xcDQVj0VzPcltMgarTwTSs5+9XsDlThEYR8sp48fXZIB11ri889u16hW/6PfRV3cLvXMaIK87K+1M41huExWkvPot9dBPeyhHW6HdloxcZxJ68PWgf7/n4L+gcn2Mc/BS7wEfC+usNv/u86tHYj1f7YN5tnYM7W/1WIJ4TPJ/fax1lT9GcF3yyoXwOPw/Ooorpv7Jhv4cY/8xwBlUYwOWJSTPc+aRwkgKX7YF/Mx/7IdJh4Ndg9GGjNTkGsidvD/qqIHr0WLv0nteP4/Lms6uTyoluS4EqzacJs+G3HHJltKgM3KL5uAX887OHwKeCU1T4JrHJA7cIS29MDUNUrwtlpBxaUsAdujCQPVXeH4rOomH9Kc5DJCk6CDOMz0YHsydvgTY/ca//vMeQAo9lHJ2BV3Zjfg4prnhlw29SbNrCbfgXWaCqBOyR7uI1ty0Z5ArJ5juHH/PVf/sU6Qzx8BoPhTI5ZA7hl7NsUXnTMRkORLrPFv3aaIYB7ck7xCHNd9GH9+x7rB2Zm+OZsP6VtX8byBU/NLHfQu6w7BufRkhKVVxnjrSvzF3ChpuieguyjUjzoTM8EvIuyuNdR3syyGLYt41KHXkWHdpT1Gx2yqBIlW99cIL0OsyKvUA4jAEXGA/SdYZW8IvbjR2LyyP6mjCQ79UJ2p9DG7q0Uam+NCGFmjq1J2+BllLn+uyYk+LhfXrzEyIT1retVETqsOwLvsZKlbxt70SB8XvRBuej1XKhrHSf+Ewt2tH2HktiGGOjXTUandqTt0BzMiIXV19DbxwIx/pm++bj2ERoTE1Kipdi2i7G0iXr02nW1pMin2MaGFRCfVco46JAewq0E3cjrI+x0QXCGdyevDsJOdTaFdxjGl4f+cc++diFz7ip6WOE9et3QRL0GOO3qAx16M5C6fjfIA6LfpBivwbVtTKGnDnKzVFd80nDPlzE2EO9vUEYBvI+22IRbqOD25O/QH8pl+FQ8OJ9dIrP3M8+83ZsAVLrbtf+3bV4TkGgv0YcFv1AISo8ylF4DdzpbfeweUrQrp9VG/Eam40aYX3n9uQd4qBnLMWh6d3e/AU6g/NsHHjEn7d8FGGNFK+L9YCUaWBRZU64XrXbzEMxdGOrIDCL4/4jucyD33Uzo5zvl1M4zemOkAnr1wVaipVdQRwGwyNdo/TWIWEwTizcnWAZLguudK9iBbqNPY3NRge3pyCBPnkke9GcCyP1x1xDvj242A2BzuF+uAUuG5cUmY/NXx0D0luDQZzwSG8tQ/JYWJ+v/dsK5WOvtY14WWF93zY6uD0FCTTF2ceLTvnF7ZB9cZ6OHUixM5BHIW2aG0HyBqQBHl1tmxIfr/Am2pNhvEjXbtb+LYkP71Nb8clbbis5EX3b6OD2FDxQhV60jwjWwhqLrzjznHbEe5amYbTYnFIkeVgZ2gmQwXiEixWqgJu2Q7Y574nBeJEEcX3gkiTQ3N8dtKPtPZbOKUO/Njq4PQULNL1on3mZSYp4sI/HTnbAe2aF4d2QWuymEUo0fskjeIBwz6eLzxzFIOWWGoR3mhmknS+5C6SQwnpWhY/43EZ4qCJmciLJiSB92+ig9tRqqDezJCThfPy38gwSTD/KWemkrAyK85Z7zxn8PpNj0ZyQzwr5EG4M/GckYyV5gH68ZxNQ9sSjDD1DX8+HApXiCyFdwnPzmWRoHWl0Xe0UGPgR+1UWC7nRMOjXRge1p9Zzcdz5c7Nw0pM9+hDJOHR835D52SkaghFiUD34J/AzSAqw1Ini46HUBpQ7ymSoGgxXmVBcr7cG/pXMxzMkc7g9q1r0fMVgKAz8znHT/aU9WMj759Bxl2ecIf77ljU+Q7L7tNFB7WmGN5dLtIRZFU/+eDk3md8PpAedEuZYr8e0Kc7Rn9h6obxZf519hbTM4W5RC8c6PkiDcI+NM5gtPMrRI7gNPyyqc63vD+OY9OINwlhAnvrS57woKOthmo9wueExCJtissDzr7IcFp8h/BkYbP6KzTo53J9P4vVIHWZ8FhSqDDIW1aTxbc7lIrVYPW1xDr7nQ0K+l2nRvY0aDGRPUQJ9toeyA+/R3XORZrihK4/25DdlDb5V/Z1EnMkwAp0aX3EmNJLYOXtDWUAW6AxVxQyldAc2em58+2gzQCMGgzQCnRrJPkIEMQUWboHO0M4WYljAbaOD2NMelnGfa2c44/p7lcfMv7sMN3DfHMbNYyX7OO1/osfTD0kd1lgEbiOJZSgW8RSJ9lNzgvSzz1lMD3rjC6EM7cEiLRbtKRA+x7JElM5hIHvaS3FQCiXDGtfeRafwOGwMeKxEXw4/RTGLfXBDUaD6gkWBcAqkE2mf2LcvqRsOvm+dIg2MjUqdrGOD1+5zTy38v1Liw1GCfVEQj5EGi8oWYundnvbK/8XMsfocz3qY5jPpMWbprr1HClSVKbZCLVAZnEV7LNJW7AJpJ8avG49YYaWdtM0JHgqeMxtwXwfEIv5Z1m9nPpkPPswRbw8W8XZe07s97eHjWYHpfM4nJba89gWmAQ2DD7UW5gJpeIz2BsdtKQCpPIqaOdKKPu9djnav8dyWlXtK4lygun9tztmiig0fI/xeFQgPt/kwh/zV9yYKVOeU0kZ7tadqutFvy41eKoPys+jJP6aCLa811Wv55v3HiahFNbDgFOljs5uOlaOqCFxeR3MHIsvWWRPF2roCzYTO0F2gqpS0R/bIsxd833FOPixWS45q2G/WUI6ViPf9o1X5Z2vHKtCMb3+Gb+qW777YMclz3pTl0oY5qmvP4B6s8mx1TDbwxdo61zO3CMOisocc7mcnnZN1bBfaF7VAD/Y0+/+f2XIfL589GN8UrKmyKBukownHnvuAYnixUvJeWaSp/GOC13hR+C2m2RHYNev2QCyGu1f1+Zi1308x7DS7ye1pdumXG0uD70qhno1mApxUFOU1Ha9COoqiKKNn1rjmxjLHMmpc/ThgGuFe6TFPJ96sKIpyxkwscWM5L0WO3rTBlKiE+T7+W/YoazhDUZQJIgs0mV7Yg+GMw9JrtlAURZkofgJdQ6FejnryGLsS5gKKoigTJ0yga8YWn2Y4gx2An8xOoCiKsiW0E2jCtLzv4c5KqIfkPr4twy8aZ1YUZctoL9A1w8WnNW1OUZStJl6ga361vFnuTfpeXgps6bUf4dPZYyiKomwx6QS6pqv4tKbNKYqyY6QXaJI+7PG43NeRps0pirJLdCPQNZVQ3yuPchPt0Dizoig7S7cCXRMa9tC0OUVRlJ4EuobDxr/D7fKo+41lKMwaZ1YURelZoEk1GpH5069fmH/agvOlzkph1jizoijKGf8DiG2AiwFzWEAAAAAASUVORK5CYII=" /></a>
+                            </div>
+                            <div class="allmenu-login-wrap">
+                                <ul class="login-txt-box">
+                                    <li>
+                                        <a href="/main/login.html" class="menu-login"><i
+                                                class="icon-login mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i>
+                                            로그인
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/mem/memtype" class="menu-join"><i
+                                                class="icon-join mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                aria-hidden="true"></i>
+                                            회원가입
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="allmenu_list_wrap">
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>Data서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/data/prod/srch?store=init" class="">Data상품
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/data/prod/cont/01" class="">맞춤Data </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>솔루션서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/sltn/prod/srch?store=init" class="">솔루션상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>광고서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/01" class="">타겟마케팅 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/02" class="">모바일서베이 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/serv/advt/prod/cont/03" class="">SOL페이배너광고
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>API서비스</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/serv/apis/prod/srch?store=init" class="">API상품
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>커뮤니티</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/cmnt/uses?store=init" class="">활용장 </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/cmnt/disc?store=init" class="">토론장 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>DataBada</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/shc/info/cont/01" class="">DataBada </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="/shc/data/cont/01" class="">신한 DataUniverse </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list">
+                                <h2 class="title"><span>MY</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item"><a href="/gin" class="">MY계약 </a></li>
+                                    <li class="item"><a href="/gin" class="">관심상품 </a></li>
+                                    <li class="item"><a href="/gin" class="">MY문의 </a></li>
+                                    <li class="item"><a href="/gin" class="">알림 </a></li>
+                                </ul>
+                            </div>
+                            <div class="allmenu_list mo-customer">
+                                <h2 class="title"><span>고객센터</span></h2>
+                                <ul class="dep1_list">
+                                    <li class="item">
+                                        <a href="/csc/anc?store=init" class="">공지사항 </a>
+                                    </li>
+                                    <li class="item"><a href="/csc/faq" class="">FAQ</a></li>
+                                    <li class="item">
+                                        <a href="/csc/qna?store=init" class="">고객문의 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="customer-box">
+                                <li>
+                                    <a href="/csc/anc?store=init" class="notice">공지사항 </a>
+                                </li>
+                                <li><a href="/csc/faq" class="faq">FAQ</a></li>
+                                <li>
+                                    <a href="/csc/qna?store=init" class="customer-center">고객문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button"
+                            class="v_close_btn v-btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close">
+                            <span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span
+                                class="v-btn__content" data-no-activator=""
+                                onclick="window.location='./main/mypage.html'"><span
+                                    class="sr-only"></span></span><!----><!---->
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button"
+        class="v_btn v-btn--block v-btn--elevated v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-elevated btn-popup-close"><span
+            class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!----><span class="v-btn__content"
+            data-no-activator=""><span class="sr-only"></span></span><!----><!----></button>
+
+
+                    <!----><main data-v-67ad47e2
+                        class="v-main container"
+                        style="--v-layout-left: 0px; --v-layout-right: 0px; --v-layout-top: 0px; --v-layout-bottom: 0px;"><div
+                            data-v-67ad47e2 class="ly-inner"><div
+                                class="sub-group data-service"><div
+                                    class="sub-title-area"><h4
+                                        class="sub-title">Data상품</h4></div><div
+                                    class="service-search-area"><div
+                                        class="search-row"><div
+                                            class="search-title">분석 목적</div><div
+                                            class="search-form filtering"><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-146"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-146-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-146"><!---->전체</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-149"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-149-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-149"><!---->시장분석</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-152"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-152-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-152"><!---->상권분석</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-155"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-155-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-155"><!---->고객분석</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-158"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-158-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-158"><!---->관광분석</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-161"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-161-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-161"><!---->지역경제</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-164"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-164-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-164"><!---->정책분석</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-167"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-167-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-167"><!---->모니터링</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-170"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-170-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-170"><!---->대안신용</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-173"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-173-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-173"><!---->심사전략</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-176"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-176-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-176"><!---->신용모형</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-179"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-179-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-179"><!---->마케팅</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-182"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-182-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-182"><!---->연구</label></div></div><!----><!----></div></div></div><div
+                                        class="search-row"><div
+                                            class="search-title">데이터
+                                            기준</div><div
+                                            class="search-form filtering"><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-185"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-185-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-185"><!---->전체</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-188"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-188-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-188"><!---->개인사업자</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-191"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-191-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-191"><!---->카드데이터</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-194"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-194-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-194"><!---->마이데이터</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-197"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-197-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-197"><!---->가명결합</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-200"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-200-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-200"><!---->공공데이터</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-203"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-203-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-203"><!---->제휴데이터</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-206"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-206-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-206"><!---->기타</label></div></div><!----><!----></div></div></div><div
+                                        class="search-row"><div
+                                            class="search-title">고객사
+                                            기준</div><div
+                                            class="search-form filtering"><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-209"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-209-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-209"><!---->전체</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-212"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-212-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-212"><!---->공공기관</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-215"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-215-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-215"><!---->민간기관</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-218"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-218-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-218"><!---->금융기관</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-221"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-221-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-221"><!---->마케팅대행사</label></div></div><!----><!----></div><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-checkbox chk-btn"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-selection-control v-selection-control--density-default v-checkbox-btn"><div
+                                                            class="v-selection-control__wrapper"><!----><div
+                                                                class="v-selection-control__input"><i
+                                                                    class="mdi-checkbox-blank-outline mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                    aria-hidden="true"></i><input
+                                                                    id="checkbox-224"
+                                                                    aria-disabled="false"
+                                                                    type="checkbox"
+                                                                    aria-describedby="checkbox-224-messages"
+                                                                    value="true"></div></div><label
+                                                            class="v-label v-label--clickable"
+                                                            for="checkbox-224"><!---->기타</label></div></div><!----><!----></div></div></div><div
+                                        class="search-row"><div
+                                            class="search-title">검색어</div><div
+                                            class="search-form"><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-text-field"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-field v-field--appended v-field--center-affix v-field--no-label v-field--variant-outlined v-theme--DefaultTheme rounded-lg v-locale--is-ltr"><div
+                                                            class="v-field__overlay"></div><div
+                                                            class="v-field__loader"><div
+                                                                class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                                role="progressbar"
+                                                                aria-hidden="true"
+                                                                aria-valuemin="0"
+                                                                aria-valuemax="100"
+                                                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                                    class="v-progress-linear__background bg-primary"
+                                                                    style="width: 100%;"></div><div
+                                                                    class="v-progress-linear__indeterminate"><div
+                                                                        class="v-progress-linear__indeterminate long bg-primary"></div><div
+                                                                        class="v-progress-linear__indeterminate short bg-primary"></div></div><!----></div></div><!----><div
+                                                            class="v-field__field"
+                                                            data-no-activator><!----><label
+                                                                class="v-label v-field-label"
+                                                                for="input-227"><!----><!----></label><!----><input
+                                                                placeholder="검색어 입력"
+                                                                size="1"
+                                                                type="text"
+                                                                id="input-227"
+                                                                aria-describedby="input-227-messages"
+                                                                class="v-field__input"><!----></div><div
+                                                            class="v-field__clearable"
+                                                            style="display: none;"><i
+                                                                class="mdi-close-circle mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default v-icon--clickable"
+                                                                role="button"
+                                                                aria-hidden="false"
+                                                                aria-label="Clear "></i></div><div
+                                                            class="v-field__append-inner"><!----><!----></div><div
+                                                            class="v-field__outline"><div
+                                                                class="v-field__outline__start"></div><!----><div
+                                                                class="v-field__outline__end"></div><!----></div></div></div><!----><!----></div></div></div><div
+                                        class="btn-area"><button type="button"
+                                            class="v-btn v-theme--DefaultTheme bg-secondary v-btn--density-default rounded-md v-btn--size-large v-btn--variant-flat"
+                                            style="min-width: 12.8rem;"><span
+                                                class="v-btn__overlay"></span><span
+                                                class="v-btn__underlay"></span><!----><span
+                                                class="v-btn__content"
+                                                data-no-activator>초기화
+                                            </span><!----><!----></button><button
+                                            type="button"
+                                            class="v-btn v-theme--DefaultTheme bg-primary v-btn--density-default rounded-md v-btn--size-large v-btn--variant-flat"
+                                            style="min-width: 22.4rem;"><span
+                                                class="v-btn__overlay"></span><span
+                                                class="v-btn__underlay"></span><!----><span
+                                                class="v-btn__content"
+                                                data-no-activator>검색
+                                            </span><!----><!----></button></div></div><div
+                                    class="search-wrap search-mo"><div
+                                        class="search-box"><div class="inp"><div
+                                                class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-locale--is-ltr v-text-field"><!----><div
+                                                    class="v-input__control"><div
+                                                        class="v-field v-field--appended v-field--center-affix v-field--no-label v-field--variant-outlined v-theme--DefaultTheme rounded-lg v-locale--is-ltr"><div
+                                                            class="v-field__overlay"></div><div
+                                                            class="v-field__loader"><div
+                                                                class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                                role="progressbar"
+                                                                aria-hidden="true"
+                                                                aria-valuemin="0"
+                                                                aria-valuemax="100"
+                                                                style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                                    class="v-progress-linear__background bg-primary"
+                                                                    style="width: 100%;"></div><div
+                                                                    class="v-progress-linear__indeterminate"><div
+                                                                        class="v-progress-linear__indeterminate long bg-primary"></div><div
+                                                                        class="v-progress-linear__indeterminate short bg-primary"></div></div><!----></div></div><!----><div
+                                                            class="v-field__field"
+                                                            data-no-activator><!----><label
+                                                                class="v-label v-field-label"
+                                                                for="input-231"><!----><!----></label><!----><input
+                                                                placeholder="검색어 입력"
+                                                                size="1"
+                                                                type="text"
+                                                                id="input-231"
+                                                                aria-describedby="input-231-messages"
+                                                                class="v-field__input"><!----></div><div
+                                                            class="v-field__clearable"
+                                                            style="display: none;"><i
+                                                                class="mdi-close-circle mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default v-icon--clickable"
+                                                                role="button"
+                                                                aria-hidden="false"
+                                                                aria-label="Clear "></i></div><div
+                                                            class="v-field__append-inner"><!----><i
+                                                                class="btn-search-blue mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default v-icon--clickable"
+                                                                role="button"
+                                                                aria-hidden="false"
+                                                                aria-label=" appended action"></i></div><div
+                                                            class="v-field__outline"><div
+                                                                class="v-field__outline__start"></div><!----><div
+                                                                class="v-field__outline__end"></div><!----></div></div></div><!----><!----></div></div></div></div><hr
+                                    class="v-divider v-theme--DefaultTheme svc-divide"
+                                    aria-orientation="horizontal"
+                                    role="separator"><div
+                                    class="service-list-area"><div
+                                        class="v-row"><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">Data서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">상권분석</span><span
+                                                            class="violet flag">지역경제</span><span
+                                                            class="pink flag">카드데이터</span><span
+                                                            class="violet flag">공공기관</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="전국 권역 X 업종별 소비자 결제 트렌드"
+                                                        class="subtitle-22 text-truncate">전국
+                                                        권역 X 업종별 소비자 결제
+                                                        트렌드</div><div
+                                                        class="text-area"><div
+                                                            title="전국 소비자의 업종별 결제 트랜드 분석 데이터"
+                                                            class="text text-twolines">전국
+                                                            소비자의 업종별 결제 트랜드 분석
+                                                            데이터</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/2645332e-ec3e-4c70-970e-ff8e98472cbe.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#소비트랜드</span><span
+                                                        class="hashtag text-16">#지역경제</span><span
+                                                        class="hashtag text-16">#고객분석</span><span
+                                                        class="hashtag text-16">#표준Data</span><span
+                                                        class="hashtag text-16">#상권분석</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">Data서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="blue flag">모니터링</span><span
+                                                            class="pink flag">카드데이터</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="e커머스X카테고리별 판매실적 정보"
+                                                        class="subtitle-22 text-truncate">e커머스X카테고리별
+                                                        판매실적 정보</div><div
+                                                        class="text-area"><div
+                                                            title="e커머스X카테고리별 판매실적 정보"
+                                                            class="text text-twolines">e커머스X카테고리별
+                                                            판매실적 정보</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/eacd4327-858b-441a-8d4b-f6f450abdfd3.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#이커머스</span><span
+                                                        class="hashtag text-16">#온라인쇼핑</span><span
+                                                        class="hashtag text-16">#모니터링</span><span
+                                                        class="hashtag text-16">#특화업종</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">Data서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="blue flag">모니터링</span><span
+                                                            class="pink flag">카드데이터</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="전국 권역별 이/미용 업종 매출정보"
+                                                        class="subtitle-22 text-truncate">전국
+                                                        권역별 이/미용 업종
+                                                        매출정보</div><div
+                                                        class="text-area"><div
+                                                            title="전국 권역별 이미용실 관련 업종(미용실, 에스테틱 등) 결제 트렌드 인사이트 제공"
+                                                            class="text text-twolines">전국
+                                                            권역별 이미용실 관련 업종(미용실,
+                                                            에스테틱 등) 결제 트렌드 인사이트
+                                                            제공</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/a2c83533-8670-40c5-9cd2-7812cdd7b07b.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#미용</span><span
+                                                        class="hashtag text-16">#뷰티</span><span
+                                                        class="hashtag text-16">#모니터링</span><span
+                                                        class="hashtag text-16">#특화업종</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">Data서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="blue flag">모니터링</span><span
+                                                            class="pink flag">카드데이터</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="전국 권역별 병원/약국 업종 매출 정보"
+                                                        class="subtitle-22 text-truncate">전국
+                                                        권역별 병원/약국 업종 매출
+                                                        정보</div><div
+                                                        class="text-area"><div
+                                                            title="전국 권역별 의료 관련 업종(병의원,약국 등) 결제 트렌드 인사이트 제공"
+                                                            class="text text-twolines">전국
+                                                            권역별 의료 관련 업종(병의원,약국
+                                                            등) 결제 트렌드 인사이트
+                                                            제공</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/68aa2609-52fb-43cc-b40c-a9515600c664.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#병원</span><span
+                                                        class="hashtag text-16">#약국</span><span
+                                                        class="hashtag text-16">#의료</span><span
+                                                        class="hashtag text-16">#모니터링</span><span
+                                                        class="hashtag text-16">#특화업종</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">Data서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="violet flag">지역경제</span><span
+                                                            class="pink flag">카드데이터</span><span
+                                                            class="violet flag">공공기관</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="전국 권역별 F&amp;B업종 매출 정보"
+                                                        class="subtitle-22 text-truncate">전국
+                                                        권역별 F&amp;B업종 매출
+                                                        정보</div><div
+                                                        class="text-area"><div
+                                                            title="전국 권역별 F&amp;B 관련업종(한식,일반대중음식 등) 결제 트렌드 인사이트 제공"
+                                                            class="text text-twolines">전국
+                                                            권역별 F&amp;B
+                                                            관련업종(한식,일반대중음식 등) 결제
+                                                            트렌드 인사이트
+                                                            제공</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/eb9bc378-5d13-4164-98eb-ca5fbd074ea7.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#F&amp;B</span><span
+                                                        class="hashtag text-16">#요식</span><span
+                                                        class="hashtag text-16">#음식</span><span
+                                                        class="hashtag text-16">#모니터링</span><span
+                                                        class="hashtag text-16">#특화업종</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">Data서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="blue flag">상권분석</span><span
+                                                            class="pink flag">카드데이터</span><span
+                                                            class="violet flag">공공기관</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="전국 권역X업종 단위 상권정보"
+                                                        class="subtitle-22 text-truncate">전국
+                                                        권역X업종 단위 상권정보</div><div
+                                                        class="text-area"><div
+                                                            title="전국 지역별 업종별 추정 매출 및 소비자 정보 제공"
+                                                            class="text text-twolines">전국
+                                                            지역별 업종별 추정 매출 및 소비자
+                                                            정보 제공</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/b4799502-61d2-4e62-be6e-4fc83abb0df7.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#상권분석</span><span
+                                                        class="hashtag text-16">#모니터링</span><span
+                                                        class="hashtag text-16">#지역경제</span><span
+                                                        class="hashtag text-16">#시장분석</span><span
+                                                        class="hashtag text-16">#업종</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">DATA/API서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="green flag">심사전략</span><span
+                                                            class="green flag">신용모형</span><span
+                                                            class="green flag">개인사업자</span><span
+                                                            class="blue flag">민간기관</span><span
+                                                            class="blue flag">금융기관</span></div><div
+                                                        title="MyCredit 신용평가모형"
+                                                        class="subtitle-22 text-truncate">MyCredit
+                                                        신용평가모형</div><div
+                                                        class="text-area"><div
+                                                            title="신한카드 데이터를 활용하여 우수한 리스크 변별력과 안정성을 확보한 개인사업자 특화 신용평가모형"
+                                                            class="text text-twolines">신한카드
+                                                            데이터를 활용하여 우수한 리스크
+                                                            변별력과 안정성을 확보한 개인사업자
+                                                            특화 신용평가모형</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/24df2037-ada3-4d51-8edf-a55c1ce52329.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#개인사업자CB</span><span
+                                                        class="hashtag text-16">#개인사업자</span><span
+                                                        class="hashtag text-16">#신용평가</span><span
+                                                        class="hashtag text-16">#MyCredit</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">DATA/API서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="green flag">심사전략</span><span
+                                                            class="green flag">개인사업자</span><span
+                                                            class="blue flag">민간기관</span><span
+                                                            class="blue flag">금융기관</span></div><div
+                                                        title="온라인 사업자 MPS"
+                                                        class="subtitle-22 text-truncate">온라인
+                                                        사업자 MPS</div><div
+                                                        class="text-area"><div
+                                                            title="온라인 사업자별 프로파일링 데이터를 제공"
+                                                            class="text text-twolines">온라인
+                                                            사업자별 프로파일링 데이터를
+                                                            제공</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/5f30369f-5a4e-450a-a79d-8ed7fb1f8616.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#개인사업자CB</span><span
+                                                        class="hashtag text-16">#온라인사업자</span><span
+                                                        class="hashtag text-16">#전자상거래</span><span
+                                                        class="hashtag text-16">#MyCredit</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">DATA/API서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">시장분석</span><span
+                                                            class="green flag">심사전략</span><span
+                                                            class="green flag">개인사업자</span><span
+                                                            class="violet flag">공공기관</span><span
+                                                            class="blue flag">민간기관</span></div><div
+                                                        title="배달 MPS"
+                                                        class="subtitle-22 text-truncate">배달
+                                                        MPS</div><div
+                                                        class="text-area"><div
+                                                            title="가맹점의 배달 플랫폼 매출 정보를 가공한 요약 항목을 제공"
+                                                            class="text text-twolines">가맹점의
+                                                            배달 플랫폼 매출 정보를 가공한 요약
+                                                            항목을 제공</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/f0729a6c-ef81-4161-ba1f-fc65762dcda7.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#개인사업자CB</span><span
+                                                        class="hashtag text-16">#가맹점</span><span
+                                                        class="hashtag text-16">#배달</span><span
+                                                        class="hashtag text-16">#MyCredit</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div><div
+                                            class="v-col-md-6 v-col-12"><div
+                                                class="v-card v-card--link v-theme--DefaultTheme v-card--density-default rounded-md v-card--variant-outlined service-list cursor-pointer"><!----><div
+                                                    class="v-card__loader"><div
+                                                        class="v-progress-linear v-theme--DefaultTheme v-locale--is-ltr"
+                                                        role="progressbar"
+                                                        aria-hidden="true"
+                                                        aria-valuemin="0"
+                                                        aria-valuemax="100"
+                                                        style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"><!----><div
+                                                            class="v-progress-linear__background"
+                                                            style="width: 100%;"></div><div
+                                                            class="v-progress-linear__indeterminate"><div
+                                                                class="v-progress-linear__indeterminate long"></div><div
+                                                                class="v-progress-linear__indeterminate short"></div></div><!----></div></div><!----><!----><div
+                                                    class="top-area"><div
+                                                        class="category-title text-16">DATA/API서비스</div><div
+                                                        class="icon-area"><div
+                                                            class="badge"><!----><!----></div><div
+                                                            class="favorites"><button
+                                                                type="button"
+                                                                class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat pa-0"
+                                                                title="관심상품"
+                                                                style="height: auto; min-width: auto;"><span
+                                                                    class="v-btn__overlay"></span><span
+                                                                    class="v-btn__underlay"></span><!----><span
+                                                                    class="v-btn__content"
+                                                                    data-no-activator><i
+                                                                        class="icon-pick-off mdi v-icon notranslate v-theme--DefaultTheme v-icon--size-default"
+                                                                        aria-hidden="true"></i></span><!----><!----></button></div></div></div><div
+                                                    class="middle-area"><div
+                                                        class="prod-flag-wrap"><span
+                                                            class="blue flag">상권분석</span><span
+                                                            class="green flag">심사전략</span><span
+                                                            class="green flag">개인사업자</span><span
+                                                            class="blue flag">민간기관</span><span
+                                                            class="blue flag">금융기관</span></div><div
+                                                        title="안정성평가지수"
+                                                        class="subtitle-22 text-truncate">안정성평가지수</div><div
+                                                        class="text-area"><div
+                                                            title="개인사업자의 휴폐업 가능성을 예측한 스코어와 등급"
+                                                            class="text text-twolines">개인사업자의
+                                                            휴폐업 가능성을 예측한 스코어와
+                                                            등급</div><div
+                                                            class="img-thumbnail"><img
+                                                                src="https://databada.shinhancard.com/fil/dispd/0a8afef3-7957-435b-a04c-db360d5ed142.png"
+                                                                alt="썸네일이미지"></div></div></div><div
+                                                    class="bottom-area text-truncate"><span
+                                                        class="hashtag text-16">#개인사업자CB</span><span
+                                                        class="hashtag text-16">#가맹점</span><span
+                                                        class="hashtag text-16">#휴폐업</span><span
+                                                        class="hashtag text-16">#MyCredit</span></div><!----><span
+                                                    class="v-card__overlay"></span><span
+                                                    class="v-card__underlay"></span></div><!----><!----></div></div><div
+                                        class="services-more-area"
+                                        style="display: none;"><button
+                                            type="button"
+                                            class="v-btn v-theme--DefaultTheme v-btn--density-default rounded-xl v-btn--size-default v-btn--variant-outlined btn-more"><span
+                                                class="v-btn__overlay"></span><span
+                                                class="v-btn__underlay"></span><!----><span
+                                                class="v-btn__content"
+                                                data-no-activator>더보기 <i
+                                                    class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default icon-arrow"
+                                                    aria-hidden="true"><!----></i></span><!----><!----></button></div></div><!----><!----></div><!----><!----></div></main><footer
+                        class="v-footer v-theme--DefaultTheme footer"
+                        style="height: auto;"><div class="foot-inner"><div
+                                class="bottom-logo"><span
+                                    class="sr-only">신한카드</span></div><div
+                                class="addr-wrap"><ul><li><a
+                                            href="javascript:;">이용약관</a></li><li><a
+                                            href="https://www.shinhancard.com/pconts/html/helpdesk/personProtect/MOBFM170/1225763_2386.html"
+                                            target="blank">개인정보처리방침</a></li></ul><address><p><span>서울특별시
+                                            중구 을지로 100 (을지로2가, 파인에비뉴 A동)
+                                            신한카드</span></p><p><span>이메일:
+                                            databada@shinhan.com</span></p></address><p
+                                    class="copyright">Copyright 2024 Shinhan
+                                    Card DataBada. All Rights
+                                    Reserved.</p></div></div></footer><!----><!----><button
+                        type="button"
+                        class="v-btn v-theme--DefaultTheme v-btn--density-default v-btn--size-default v-btn--variant-flat top-btn"
+                        style="display: none;"><span
+                            class="v-btn__overlay"></span><span
+                            class="v-btn__underlay"></span><!----><span
+                            class="v-btn__content" data-no-activator><i
+                                class="v-icon notranslate v-theme--DefaultTheme v-icon--size-default btn-arrow-top"
+                                aria-hidden="true"><!----></i><span
+                                class="sr-only">위로가기</span></span><!----><!----></button></div></div></div>
+    </body>
+</html>

@@ -1,0 +1,357 @@
+/* 검색창 컨테이너 */
+.search_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* 검색 입력 필드 */
+.search_input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px 0 0 8px;
+}
+
+/* 검색 버튼 */
+.search_button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s;
+}
+
+.search_button:hover {
+    background-color: #0056b3;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    .search_container {
+        max-width: 90%;
+    }
+
+    .search_input {
+        font-size: 0.9rem;
+    }
+
+    .search_button {
+        font-size: 0.9rem;
+    }
+}
+
+grid-template-areas: "prepend control append"
+"a messages b";
+grid-template-columns: max-content minmax(0, 1fr) max-content;
+grid-template-rows: auto auto;
+}
+
+
+
+element.style {}
+
+.v-input--density-default:not(.v-autocomplete--multiple),
+.v-field--variant-solo,
+.v-field--variant-filled {
+    --v-input-control-height: 2.4375rem;
+    --v-input-padding-top: .125rem;
+}
+
+.v-locale--is-ltr {
+    direction: ltr;
+}
+
+.v-input--horizontal {
+    grid-template-areas:
+        "prepend control append"
+        "a messages b";
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    grid-template-rows: auto auto;
+}
+
+.v-input--density-default {
+    --v-input-control-height: 56px;
+    --v-input-padding-top: 16px;
+}
+
+.v-input {
+    display: grid;
+    flex: 1 1 auto;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select,
+label,
+header,
+footer,
+main,
+article,
+aside,
+section,
+address {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+:before,
+:after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+}
+
+user agent stylesheet div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+style attribute {
+    --v-layout-left: 0px;
+    --v-layout-right: 0px;
+    --v-layout-top: 0px;
+    --v-layout-bottom: 0px;
+}
+
+<style>.v-theme--DefaultTheme {
+    color-scheme: normal;
+    --v-theme-background: 255, 255, 255;
+    --v-theme-background-overlay-multiplier: 1;
+    --v-theme-surface: 255, 255, 255;
+    --v-theme-surface-overlay-multiplier: 1;
+    --v-theme-surface-bright: 255, 255, 255;
+    --v-theme-surface-bright-overlay-multiplier: 1;
+    --v-theme-surface-light: 238, 238, 238;
+    --v-theme-surface-light-overlay-multiplier: 1;
+    --v-theme-surface-variant: 66, 66, 66;
+    --v-theme-surface-variant-overlay-multiplier: 2;
+    --v-theme-on-surface-variant: 255, 255, 255;
+    --v-theme-primary: 53, 108, 255;
+    --v-theme-primary-overlay-multiplier: 1;
+    --v-theme-primary-darken-1: 31, 85, 146;
+    --v-theme-primary-darken-1-overlay-multiplier: 2;
+    --v-theme-secondary: 233, 237, 251;
+    --v-theme-secondary-overlay-multiplier: 1;
+    --v-theme-secondary-darken-1: 1, 135, 134;
+    --v-theme-secondary-darken-1-overlay-multiplier: 1;
+    --v-theme-error: 255, 54, 54;
+    --v-theme-error-overlay-multiplier: 1;
+    --v-theme-info: 62, 201, 214;
+    --v-theme-info-overlay-multiplier: 1;
+    --v-theme-success: 44, 168, 127;
+    --v-theme-success-overlay-multiplier: 1;
+    --v-theme-warning: 229, 138, 0;
+    --v-theme-warning-overlay-multiplier: 1;
+    --v-theme-lightprimary: 233, 240, 255;
+    --v-theme-lightprimary-overlay-multiplier: 1;
+    --v-theme-lightsecondary: 248, 249, 250;
+    --v-theme-lightsecondary-overlay-multiplier: 1;
+    --v-theme-lightsuccess: 192, 229, 217;
+    --v-theme-lightsuccess-overlay-multiplier: 1;
+    --v-theme-lightinfo: 197, 239, 243;
+    --v-theme-lightinfo-overlay-multiplier: 1;
+    --v-theme-lighterror: 245, 190, 190;
+    --v-theme-lighterror-overlay-multiplier: 1;
+    --v-theme-lightwarning: 247, 220, 179;
+    --v-theme-lightwarning-overlay-multiplier: 1;
+    --v-theme-darkText: 29, 38, 48;
+    --v-theme-darkText-overlay-multiplier: 2;
+    --v-theme-lightText: 17, 21, 24;
+    --v-theme-lightText-overlay-multiplier: 2;
+    --v-theme-darkprimary: 63, 120, 255;
+    --v-theme-darkprimary-overlay-multiplier: 1;
+    --v-theme-darksecondary: 62, 72, 83;
+    --v-theme-darksecondary-overlay-multiplier: 2;
+    --v-theme-darkinfo: 48, 188, 204;
+    --v-theme-darkinfo-overlay-multiplier: 1;
+    Show all properties (81 more)
+}
+
+.v-layout--full-height {
+    --v-scrollbar-offset: inherit;
+    height: 100%;
+}
+
+.v-layout {
+    --v-scrollbar-offset: 0px;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.v-application {
+    display: flex;
+    background: rgb(var(--v-theme-background));
+    color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+}
+
+body,
+input,
+textarea,
+select,
+button,
+table,
+pre {
+    font-family: Spoqa Han Sans Neo, Noto Sans KR, Malgun Gothic, 맑은 고딕, 돋움, dotum, Apple SD Gothic Neo, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 400;
+    color: #111518;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --swiper-navigation-size: 44px;
+    --swiper-theme-color: #007aff;
+    --v-theme-overlay-multiplier: 1;
+    --v-scrollbar-offset: 0px;
+}
+
+
+back_test1{
+    --v-theme-background: 255, 255, 255;
+    --v-theme-background-overlay-multiplier: 1;
+    --v-theme-surface: 255, 255, 255;
+    --v-theme-surface-overlay-multiplier: 1;
+    --v-theme-surface-bright: 255, 255, 255;
+    --v-theme-surface-bright-overlay-multiplier: 1;
+    --v-theme-surface-light: 238, 238, 238;
+    --v-theme-surface-light-overlay-multiplier: 1;
+    --v-theme-surface-variant: 66, 66, 66;
+    --v-theme-surface-variant-overlay-multiplier: 2;
+    --v-theme-on-surface-variant: 255, 255, 255;
+    --v-theme-primary: 53, 108, 255;
+    --v-theme-primary-overlay-multiplier: 1;
+}
+back_test2{
+    --v-theme-primary-darken-1: 31, 85, 146;
+    --v-theme-primary-darken-1-overlay-multiplier: 2;
+    --v-theme-secondary: 233, 237, 251;
+    --v-theme-secondary-overlay-multiplier: 1;
+    --v-theme-secondary-darken-1: 1, 135, 134;
+    --v-theme-secondary-darken-1-overlay-multiplier: 1;
+    --v-theme-error: 255, 54, 54;
+    --v-theme-error-overlay-multiplier: 1;
+    --v-theme-info: 62, 201, 214;
+    --v-theme-info-overlay-multiplier: 1;
+    --v-theme-success: 44, 168, 127;
+    --v-theme-success-overlay-multiplier: 1;
+    --v-theme-warning: 229, 138, 0;
+    --v-theme-warning-overlay-multiplier: 1;
+    --v-theme-lightprimary: 233, 240, 255;
+    --v-theme-lightprimary-overlay-multiplier: 1;
+    --v-theme-lightsecondary: 248, 249, 250;
+    --v-theme-lightsecondary-overlay-multiplier: 1;
+    --v-theme-lightsuccess: 192, 229, 217;
+    --v-theme-lightsuccess-overlay-multiplier: 1;
+    --v-theme-lightinfo: 197, 239, 243;
+    --v-theme-lightinfo-overlay-multiplier: 1;
+    --v-theme-lighterror: 245, 190, 190;
+    --v-theme-lighterror-overlay-multiplier: 1;
+    --v-theme-lightwarning: 247, 220, 179;
+    --v-theme-lightwarning-overlay-multiplier: 1;
+    --v-theme-darkText: 29, 38, 48;
+    --v-theme-darkText-overlay-multiplier: 2;
+    --v-theme-lightText: 17, 21, 24;
+    --v-theme-lightText-overlay-multiplier: 2;
+    --v-theme-darkprimary: 63, 120, 255;
+    --v-theme-darkprimary-overlay-multiplier: 1;
+    --v-theme-darksecondary: 62, 72, 83;
+    --v-theme-darksecondary-overlay-multiplier: 2;
+    --v-theme-darkinfo: 48, 188, 204;
+    --v-theme-darkinfo-overlay-multiplier: 1;
+    --v-theme-darksuccess: 33, 151, 108;
+/* Show all properties (80 more)*/
+}
+
+
+injected stylesheet:root {
+    --lt-color-gray-100: #f8f9fc;
+    --lt-color-gray-200: #f1f3f9;
+    --lt-color-gray-300: #dee3ed;
+    --lt-color-gray-400: #c2c9d6;
+    --lt-color-gray-500: #8f96a3;
+    --lt-color-gray-600: #5e636e;
+    --lt-color-gray-700: #2f3237;
+    --lt-color-gray-800: #1d1e20;
+    --lt-color-gray-900: #111213;
+    --lt-shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+    --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1), 0 6px 20px -3px rgba(0, 0, 0, 0.2);
+    --lt-color-white: #fff !important;
+    --lt-color-black: #111213 !important;
+    --lt-color-transparent: rgba(255, 255, 255, 0) !important;
+    --lt-color-background-light: var(--lt-color-gray-100) !important;
+    --lt-color-background-default: var(--lt-color-gray-200) !important;
+    --lt-color-background-dark: var(--lt-color-gray-300) !important;
+    --lt-color-border-light: var(--lt-color-gray-200) !important;
+    --lt-color-border-default: var(--lt-color-gray-300) !important;
+    --lt-color-border-dark: var(--lt-color-gray-400) !important;
+    --lt-color-text-very-light: var(--lt-color-gray-500) !important;
+    --lt-color-text-light: var(--lt-color-gray-600) !important;
+    --lt-color-text-default: var(--lt-color-gray-700) !important;
+    --lt-color-text-dark: var(--lt-color-gray-800) !important;
+    --lt-color-overlay-default: #fff !important;
+    --lt-color-overlay-dark: #fff !important;
+    --lt-color-overlay-transparent: rgba(0, 0, 0, 0.1) !important;
+    --lt-shadow-website-overlay: 0 0 7px 0 rgba(0, 0, 0, 0.3) !important;
+}

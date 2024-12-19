@@ -40,7 +40,9 @@ address {
     display: flex;
 }
 
-.v-application.wrap .head-inner, .v-footer.footer .foot-inner, .v-main.container .ly-inner {
+.v-application.wrap .head-inner,
+.v-footer.footer .foot-inner,
+.v-main.container .ly-inner {
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;

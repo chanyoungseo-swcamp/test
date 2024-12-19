@@ -1,7 +1,6 @@
 .main-wrap .main-search-wrap .main-search-inner {
     margin: 3.2rem auto 0;
-    display: flex
-;
+    display: flex;
     padding: 3.2rem 0 2.4rem;
     flex-direction: column;
     justify-content: center;
@@ -17,13 +16,16 @@
     max-width: 79.2em;
 }
 
-.main-wrap .main-search-wrap .input-wrap .v-input, .main-wrap .main-search-wrap .input-wrap .v-input__control {
+.main-wrap .main-search-wrap .input-wrap .v-input,
+.main-wrap .main-search-wrap .input-wrap .v-input__control {
     width: 100%;
     background-color: #fff !important;
     border-radius: 100rem;
 }
 
-.v-input--density-default:not(.v-autocomplete--multiple), .v-field--variant-solo, .v-field--variant-filled {
+.v-input--density-default:not(.v-autocomplete--multiple),
+.v-field--variant-solo,
+.v-field--variant-filled {
     --v-input-control-height: 2.4375rem;
     --v-input-padding-top: .125rem;
 }
@@ -37,8 +39,7 @@
 }
 
 .v-input {
-    display: grid
-;
+    display: grid;
     flex: 1 1 auto;
     font-size: 1rem;
     font-weight: 400;
@@ -46,8 +47,7 @@
 }
 
 .v-input__control {
-    display: flex
-;
+    display: flex;
     grid-area: control;
 }
 
@@ -80,6 +80,7 @@
 .v-field--variant-outlined .v-field__loader {
     top: calc(100% - 3px);
 }
+
 .v-field__loader {
     top: calc(100% - 2px);
     left: 0;
@@ -93,11 +94,13 @@
     overflow: hidden;
 }
 
-.v-progress-linear__determinate, .v-progress-linear__indeterminate {
+.v-progress-linear__determinate,
+.v-progress-linear__indeterminate {
     background: currentColor;
 }
 
-.v-progress-linear__determinate, .v-progress-linear__indeterminate {
+.v-progress-linear__determinate,
+.v-progress-linear__indeterminate {
     background: currentColor;
 }
 
@@ -107,7 +110,8 @@
     color: rgb(var(--v-theme-on-primary)) !important;
 }
 
-.v-progress-linear__determinate, .v-progress-linear__indeterminate {
+.v-progress-linear__determinate,
+.v-progress-linear__indeterminate {
     background: currentColor;
 }
 
@@ -116,14 +120,16 @@
     grid-area: field;
     position: relative;
     align-items: flex-start;
-    display: flex
-;
+    display: flex;
 }
 
 .v-field.v-field--appended {
     --v-field-padding-end: 6px;
 }
-.v-input--density-default .v-field--variant-outlined, .v-input--density-default .v-field--single-line, .v-input--density-default .v-field--no-label {
+
+.v-input--density-default .v-field--variant-outlined,
+.v-input--density-default .v-field--single-line,
+.v-input--density-default .v-field--no-label {
     --v-field-padding-bottom: 16px;
 }
 
@@ -131,6 +137,7 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
 .v-label.v-field-label {
     contain: layout paint;
     display: block;
@@ -141,7 +148,7 @@
     position: absolute;
     top: var(--v-input-padding-top);
     transform-origin: left center;
-    transition: .15s cubic-bezier(.4,0,.2,1);
+    transition: .15s cubic-bezier(.4, 0, .2, 1);
     transition-property: opacity, transform;
     z-index: 1;
 }
@@ -157,8 +164,7 @@
 .v-label {
     align-items: center;
     color: inherit;
-    display: inline-flex
-;
+    display: inline-flex;
     font-size: 1rem;
     letter-spacing: .009375em;
     min-width: 0;
@@ -178,11 +184,14 @@
     font-size: 1.8rem;
 }
 
-.v-input--density-default:not(.v-autocomplete--multiple) input.v-field__input, .v-field--variant-solo input.v-field__input, .v-field--variant-filled input.v-field__input {
+.v-input--density-default:not(.v-autocomplete--multiple) input.v-field__input,
+.v-field--variant-solo input.v-field__input,
+.v-field--variant-filled input.v-field__input {
     padding-bottom: .125rem;
 }
 
-.v-text-field .v-field--no-label input, .v-text-field .v-field--active input {
+.v-text-field .v-field--no-label input,
+.v-text-field .v-field--active input {
     opacity: 1;
 }
 
@@ -193,19 +202,27 @@
 input.v-field__input {
     background-color: transparent !important;
 }
+
 .v-text-field input {
     font-size: 1.6rem;
 }
+
 .v-text-field input {
     color: inherit;
     opacity: 0;
     flex: 1;
-    transition: .15s opacity cubic-bezier(.4,0,.2,1);
+    transition: .15s opacity cubic-bezier(.4, 0, .2, 1);
     min-width: 0;
 }
 
 /* font */
-body, input, textarea, select, button, table, pre {
+body,
+input,
+textarea,
+select,
+button,
+table,
+pre {
     font-family: Spoqa Han Sans Neo, Noto Sans KR, Malgun Gothic, 맑은 고딕, 돋움, dotum, Apple SD Gothic Neo, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-weight: 400;
     color: #111518;

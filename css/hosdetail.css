@@ -102,6 +102,7 @@ html {
     background-color: #111518b3;
     z-index: 90;
 }
+
 /*레이아웃*/
 .v-locale--is-ltr {
     direction: ltr;
@@ -187,6 +188,7 @@ div {
     max-width: 120rem;
     margin: 0 auto;
 }
+
 /*병원소개, 진료과목*/
 .product-area {
     padding-top: 3.2rem;
@@ -340,10 +342,12 @@ button,
         transition: opacity .2s ease-in-out;
     }
 }
+
 /*병원 소개 부분*/
 .product-area .top-info {
     display: flex;
 }
+
 .product-detail .detail-info .member-only {
     display: flex;
     flex-direction: column;
@@ -354,6 +358,7 @@ button,
     background-color: #fff;
     text-align: center;
 }
+
 .product-detail .detail-info .member-only .title {
     display: flex;
     flex-direction: column;
@@ -363,6 +368,7 @@ button,
     font-weight: 500;
     line-height: 150%;
 }
+
 .product-detail .detail-info .member-only .text {
     color: #666;
     font-size: 1.6rem;
@@ -845,6 +851,7 @@ td {
 .product-detail .detail-info>.title .v-icon.icon-recommend {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVoSURBVHgB7ZtPTFxFHMe/83bXrMbCo3ERElmXxMQDEFcJRkuTgvFgmtjQ9KAeDHCoNmlSSNSaNNrKyaNgPFR7gJ5avbQX/52gia2JiSlGDr35AgfXoHUhxEKgO85vaOnb3Tez8/Ytb6G8T0L27Zt585jf/H6/+c1vZoGIiIiIiL0Lww7DFiCRHBCXhxhYFryQAWO2LOQ8D2Y5DHy2AFzD+urVvAAB2DECsO2WjJXgI5xjaKvDBogOTBXWMZbP5xxUQd0FQCNuJR49x8FHEQChLeOF9TtjfjXCtwBopBBHRlcn/3duBoZtsQSmxWUGtcHh6+j3ow1GApCj9EhyhBfEKBmoJ6nl7cXcsLbNVCrLELuC2nX+Pg7H3aP5xcVZk8oVBVDtKP27mGO1avOLzyfQ2NiAtweHYYixJmgFEEBFHSGAdu82bZslkjdN20y3tWH211/kdfszz2JpeRmGCCGsPl/JJ8R0hcnH900yhpeKboqpiAO3hOxu0UvK/jhmhI8YXl1Z8XzxY/uaPhUfr8GQ06ffR093t7xeW1vD9Rs/mz5qW7FE8s5/Kz/qKqnV9ImWPtH56eLKfKKwvvZJtXPvPY36w88zNPqkBcTS0jKy3T1+tADCFNp1pmApCxgGixri7Ortxb9GgwQeVgLn/NR/6803tjpPkB84fNhYee69Uz+9KgXAOc+W3JlAAMj2hekM+XnmxLvHy+6RUPzAYQ3K6FJBXPNspujbxqrRtKJkM7xV0tjQIEeYRjydbkNnZye6OjrK6h08cAAffvAe5ubmpEmQOczPL2jMgtuIyXdPeZUqfUBTqoW7v+umNRP2p1omSzXgxDvH5Si71TwI8wsLOP/lBZz/6kLRffHeqbwiLlGaQK0pNyngu+9/QK3xalM476yqfmgCgMe8TyN2ZOCY/AzK78Ik1G1ZGdVz4QlAEULTP3zolVfxbQBt+On6jQqC5EonGKYGKCFnRmFuqe2aQDZ/5OgxX7GBm/AEQMmMCpz56KwvIVDdMx+fNajJlO8OUwMck0o0pZliXrfgqErCmwUY+82kXq+Y503p6uwwqsfBlDFMmBowY1Kpq8usU0Rvr7GwrqkKwhOASGBW8gMyCvQIisjLe3l4VX3PdysITQC0iOLcuqir01ky+uTZyTGSl892v4iTp0bLBNHb+7Kuyc0oULOAC3caTPBxXfFBl/3T9JZ9oadoVrh0+Ws531+6/M3WPa/1QhExjOmKQxVAPpdzeIEpV5VtT7VJdX9ddJKmN6+5nTTg5KkRqRF0nU6nVc3J/AW9ExpCWwzdR5cSoxWh34BG84xRSiz0SFD6ghj64REXVBPNKTsfo6Ro5eRNXUJhaQoidQ3D4Mgnm2nxnNneQN3WApS3V2lCADZH3nBPgKjrYkhqgrBTnWM0hRyetPmcvz3Cuq8GyU7z//w5KkauXXjdi74elil60XHxbLUJ29BngUq4tsf7RAefYzRbuLbHudx7ELG9tc3b4/USQNjsiIRIPYkEgD1OJADscXaNAOhEiZiZpptSrTft5uYB1IhdIwDGrUlQbCB2eRiPTaJG7B4TYMy1vcWNj9FVIvIB2ONEAtCUOe4vtt36NB5CzDUgzttRJ+Tp1CJYoBWgG/UZoZLdFMb8HXCqJWWHqzgPdlzH3bayhJedqelran7ySvlobB+UG9ifav2s9GgNZz4TJxr0J0VF5MVk8FHGDLYdkQRx/1bgAcpTqNUQ15bGMIy7nkdl+7DtcGl3xbdERijO+lFDtE5QJi1rn7mtFoezQr/fpGcljNNcwhyGRGVyRhmEicwDiqzxxup40PyfF1X8YEIkLePJLMJgA061P4WJiIiIiDDgf4j4O438np0nAAAAAElFTkSuQmCC);
 }
+
 /*주변에 다른 병원 2개 노출*/
 
 .service-list-area {
@@ -871,19 +878,27 @@ td {
 .service-list-area .v-card {
     border-color: #e5e5e5;
 }
+
 .cursor-pointer {
     cursor: pointer !important;
 }
+
 .v-card--link {
     cursor: pointer;
 }
+
 .v-card--variant-outlined {
     border: thin solid currentColor;
 }
-.v-card--variant-plain, .v-card--variant-outlined, .v-card--variant-text, .v-card--variant-tonal {
+
+.v-card--variant-plain,
+.v-card--variant-outlined,
+.v-card--variant-text,
+.v-card--variant-tonal {
     background: transparent;
     color: inherit;
 }
+
 .v-card__loader {
     bottom: auto;
     top: 0;
@@ -893,6 +908,7 @@ td {
     width: 100%;
     z-index: 1;
 }
+
 .v-card {
     display: block;
     overflow: hidden;
@@ -902,13 +918,14 @@ td {
     text-decoration: none;
     transition-duration: .28s;
     transition-property: box-shadow, opacity, background;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     z-index: 0;
     border-color: rgba(var(--v-border-color), var(--v-border-opacity));
     border-style: solid;
     border-width: 0;
     border-radius: 4px;
 }
+
 .v-card__overlay {
     background-color: currentColor;
     border-radius: inherit;
@@ -944,11 +961,12 @@ td {
     transition-property: width, left, right;
     transition: inherit;
 }
+
 .v-progress-linear {
     background: transparent;
     overflow: hidden;
     position: relative;
-    transition: .2s cubic-bezier(.4,0,.2,1);
+    transition: .2s cubic-bezier(.4, 0, .2, 1);
     width: 100%;
 }
 
@@ -1086,15 +1104,19 @@ td {
     padding: 3.2rem;
     border-radius: 2.4rem !important;
 }
+
 .v-card--variant-outlined {
     border: thin solid currentColor;
 }
+
 .service-list-area .v-card.service-list .middle-area .subtitle-22 {
     margin: 1.2rem 0 1.6rem;
 }
+
 .service-list-area .v-card.service-list .middle-area .text-area {
     display: flex;
 }
+
 .service-list-area .v-card.service-list .middle-area .text-area .text {
     margin-right: 2.4rem;
     margin-bottom: 1rem;
@@ -1102,6 +1124,7 @@ td {
     font-size: 1.8rem;
     line-height: 150%;
 }
+
 .text-twolines {
     display: -webkit-box;
     /*-webkit-line-clamp: 2;*/
@@ -1109,28 +1132,34 @@ td {
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .service-list-area .v-card.service-list .bottom-area {
     padding-top: 2.4rem;
     border-top: 1px solid #e5e5e5;
 }
+
 .text-truncate {
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
+
 .service-list-area .v-card.service-list .bottom-area .hashtag {
     color: #7f87a4;
     margin-right: 1.6rem;
 }
+
 .btn-list {
     display: flex;
     justify-content: center;
     margin-top: 6.4rem;
 }
+
 .btn-list .v-btn {
     min-width: 22.4rem;
     padding: 0 1.6rem;
 }
+
 .v-btn--size-x-large {
     --v-btn-size: 1.8rem;
     --v-btn-height: 5.6rem;
@@ -1138,6 +1167,7 @@ td {
     padding: 0 1.6rem;
     font-weight: 700;
 }
+
 .rounded-lg {
     border-radius: 1.2rem !important;
 }
@@ -1367,21 +1397,26 @@ td {
     .service-list-area .v-card.service-list .middle-area {
         margin: 1.6rem 0;
     }
+
     .service-list-area .v-card.service-list .middle-area .prod-flag-wrap .flag+.flag {
         margin-left: .4rem;
     }
+
     .service-list-area .v-card.service-list .middle-area .prod-flag-wrap .flag:not(:nth-child(-n+3)) {
         display: none;
     }
+
     .service-list-area .v-card.service-list .middle-area .subtitle-22 {
         margin: 1.2rem 0;
         font-size: 1.6rem;
     }
+
     .service-list-area .v-card.service-list .middle-area .text-area .text {
         margin-right: 1.6rem;
         margin-bottom: .6rem;
         font-size: 1.4rem;
     }
+
     .service-list-area .v-card.service-list .bottom-area {
         margin-top: 1.6rem;
         padding-top: 1.6rem;
@@ -1389,27 +1424,34 @@ td {
         overflow: visible !important;
         text-overflow: inherit !important;
     }
+
     .service-list-area .v-card.service-list .bottom-area .hashtag {
         font-size: 1.4rem;
         margin-right: .8rem;
     }
+
     .btn-list {
         margin-top: 4.8rem;
     }
+
     .btn-list .v-btn {
         min-width: 100%;
     }
+
     .v-btn--size-x-large {
         --v-btn-size: 1.6rem;
         --v-btn-height: 5rem;
         font-size: var(--v-btn-size);
     }
+
     .product-detail .detail-info .member-only {
         padding: 2.4rem 1.6rem;
     }
+
     .product-detail .detail-info .member-only .title {
         font-size: 1.8rem;
     }
+
     .product-detail .detail-info .member-only .text {
         font-size: 1.4rem;
     }
